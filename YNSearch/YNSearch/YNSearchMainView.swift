@@ -21,9 +21,10 @@ class YNSearchMainView: UIView {
     var leftMargin:CGFloat = 15
     var delegate: YNSearchMainViewDelegate?
 
-    public init(frame: CGRect, categories: [String]) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
+        guard let categories = YNSerach.shared.getCategories() else { return }
         self.initView(categories: categories)
     }
     

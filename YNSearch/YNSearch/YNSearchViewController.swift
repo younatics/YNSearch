@@ -12,17 +12,15 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
     
-    var categories = [String]()
-    var database = [String]()
-    
     var ynSearchTextfield: YNSearchTextField!
     var ynSearchView: YNSearchView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.categories = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert"]
-        self.database = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert"]
+        let demoData = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert"]
+        YNSerach.shared.setDatabase(value: demoData)
+        YNSerach.shared.setCategories(value: demoData)
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(closeKeyboard)))
         
@@ -31,7 +29,7 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
         self.ynSearchTextfield.addTarget(self, action: #selector(ynSearchTextfieldTextChanged(_:)), for: .editingChanged)
         self.view.addSubview(self.ynSearchTextfield)
         
-        self.ynSearchView = YNSearchView(frame: CGRect(x: 0, y: 70, width: width, height: height-70), categories: self.categories, database: self.database)
+        self.ynSearchView = YNSearchView(frame: CGRect(x: 0, y: 70, width: width, height: height-70))
         self.view.addSubview(self.ynSearchView)
         
     }

@@ -18,9 +18,11 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
         }
     }
 
-    public init(frame: CGRect, database: [String]) {
-        super.init(frame: frame, style: .plain)
+    public override init(frame: CGRect, style: UITableViewStyle) {
+        super.init(frame: frame, style: style)
         self.initView()
+        
+        guard let database = YNSerach.shared.getDatabase() else { return }
         self.database = database
         
     }
