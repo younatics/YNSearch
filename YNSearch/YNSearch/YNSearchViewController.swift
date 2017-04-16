@@ -26,15 +26,14 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let ynSerach = YNSerach()
-        let demoCategories = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert"]
-        let demoDatabase = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert"]
-        let demoSearchHistories = ["Menu", "Animation", "Transition", "TableView"]
-        
-        ynSerach.setDatabase(value: demoDatabase)
-        ynSerach.setCategories(value: demoCategories)
-        ynSerach.setSearchHistories(value: demoSearchHistories)
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.ynSearchView.ynSearchMainView.redrawSearchHistoryButtons()
+    }
+    
+    func ynSearchinit() {
         self.ynSearchTextfieldView = YNSearchTextFieldView(frame: CGRect(x: 20, y: 20, width: width-40, height: 50))
         self.ynSearchTextfieldView.ynSearchTextField.delegate = self
         self.ynSearchTextfieldView.ynSearchTextField.addTarget(self, action: #selector(ynSearchTextfieldTextChanged(_:)), for: .editingChanged)
@@ -43,14 +42,9 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
         
         self.ynSearchView = YNSearchView(frame: CGRect(x: 0, y: 70, width: width, height: height-70))
         self.view.addSubview(self.ynSearchView)
-        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.ynSearchView.ynSearchMainView.redrawSearchHistoryButtons()
-    }
-    
+    // MARK: - YNSearchTextfield
     func ynSearchTextfieldcancelButtonClicked() {
         self.ynSearchTextfieldView.ynSearchTextField.text = ""
         self.ynSearchTextfieldView.ynSearchTextField.endEditing(true)

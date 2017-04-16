@@ -37,10 +37,6 @@ class YNSearchMainView: UIView {
         super.init(coder: aDecoder)
     }
     
-    override func willMove(toSuperview newSuperview: UIView?) {
-        self.redrawSearchHistoryButtons()
-    }
-    
     func ynCategoryButtonClicked(_ sender: UIButton) {
         guard let text = ynCategoryButtons[sender.tag].titleLabel?.text else { return }
         ynSerach.appendSearchHistories(value: text)
@@ -140,5 +136,6 @@ class YNSearchMainView: UIView {
         self.clearHistoryButton.addTarget(self, action: #selector(clearHistoryButtonClicked), for: .touchUpInside)
         self.addSubview(clearHistoryButton)
         
+        self.delegate?.ynSearchMainViewSearchHistoryChanged()
     }
 }

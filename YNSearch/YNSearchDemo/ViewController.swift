@@ -12,6 +12,18 @@ class ViewController: YNSearchViewController, YNSearchDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let ynSerach = YNSerach()
+        let demoCategories = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert", "UIView", "UITextfield", "UITableView", "Swift", "iOS", "Android"]
+        let demoDatabase = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert", "UIView", "UITextfield", "UITableView", "Swift", "iOS", "Android"]
+        let demoSearchHistories = ["Menu", "Animation", "Transition", "TableView"]
+        
+        ynSerach.setDatabase(value: demoDatabase)
+        ynSerach.setCategories(value: demoCategories)
+        ynSerach.setSearchHistories(value: demoDatabase)
+
+        self.ynSearchinit()
+        
         self.delegate = self
         self.navigationController?.setNavigationBarHidden(true, animated: false)
 

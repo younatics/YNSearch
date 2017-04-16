@@ -8,18 +8,24 @@
 
 import UIKit
 
-public protocol YNSearchDelegate: YNSearchMainViewDelegate, YNSearchListViewDelegate {
-}
+public protocol YNSearchDelegate: YNSearchMainViewDelegate, YNSearchListViewDelegate { }
 
 public protocol YNSearchMainViewDelegate {
     func ynCategoryButtonClicked(text: String)
     
     func ynSearchHistoryButtonClicked(text: String)
 
+    func ynSearchMainViewSearchHistoryChanged()
+
 }
 
 public protocol YNSearchListViewDelegate {    
     func ynSearchListViewClicked(text: String)
+    
+}
+
+extension YNSearchMainViewDelegate {
+    func ynSearchMainViewSearchHistoryChanged() { }
 }
 
 
