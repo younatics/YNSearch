@@ -15,3 +15,9 @@ public protocol YNSearchMainViewDelegate {
     func ynSearchHistoryButtonClicked(_ sender: UIButton)
 
 }
+
+public protocol YNSearchListViewDelegate {
+    func ynSearchClicked(text: String)
+}
+
+

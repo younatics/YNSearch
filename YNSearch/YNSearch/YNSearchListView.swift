@@ -9,10 +9,13 @@
 import UIKit
 
 class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource {
-
-    override init(frame: CGRect, style: UITableViewStyle) {
-        super.init(frame: frame, style: style)
+    var ynSearchListViewDelegate: YNSearchListViewDelegate?
+    var database: [String]?
+    
+    public init(frame: CGRect, database: [String]) {
+        super.init(frame: frame, style: .plain)
         self.initView()
+        self.database = database
         
     }
     
@@ -23,13 +26,20 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
     
     // MARK: - UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let _database = database else { return UITableViewCell() }
+
         let cell = tableView.dequeueReusableCell(withIdentifier: YNSearchListViewCell.ID) as! YNSearchListViewCell
-        cell.searchLabel.text = "History"
+        cell.searchLabel.text = _database[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        guard let _database = database else { return 0 }
+        return _database.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.ynSearchListViewDelegate?.ynSearchClicked(text: "")
     }
     
     

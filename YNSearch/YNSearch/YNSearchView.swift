@@ -19,14 +19,14 @@ class YNSearchView: UIView, YNSearchMainViewDelegate {
         }
     }
     
-    public init(frame: CGRect, categories: [String]) {
+    public init(frame: CGRect, categories: [String], database: [String]) {
         super.init(frame: frame)
         
         self.ynSearchMainView = YNSearchMainView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height), categories: categories)
         self.ynSearchMainView.delegate = self
         self.addSubview(self.ynSearchMainView)
         
-        self.ynSearchListView = YNSearchListView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height), style: .plain)
+        self.ynSearchListView = YNSearchListView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height), database: database)
         self.ynSearchListView.isHidden = true
         self.addSubview(self.ynSearchListView)
     }
