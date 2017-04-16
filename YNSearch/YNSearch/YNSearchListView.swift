@@ -12,6 +12,12 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
     var ynSearchListViewDelegate: YNSearchListViewDelegate?
     var database: [String]?
     
+    var changedText: String? {
+        didSet {
+            
+        }
+    }
+
     public init(frame: CGRect, database: [String]) {
         super.init(frame: frame, style: .plain)
         self.initView()
@@ -39,7 +45,8 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.ynSearchListViewDelegate?.ynSearchClicked(text: "")
+        guard let _database = database else { return }
+        self.ynSearchListViewDelegate?.ynSearchClicked(text: _database[indexPath.row])
     }
     
     

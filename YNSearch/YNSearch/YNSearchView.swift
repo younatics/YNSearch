@@ -37,7 +37,8 @@ class YNSearchView: UIView, YNSearchMainViewDelegate {
     
     // MARK: - ynSearchListView
     func ynSearchListViewTextChanged(text: String) {
-        
+        self.ynSearchListView.changedText = text
+
     }
     
     
