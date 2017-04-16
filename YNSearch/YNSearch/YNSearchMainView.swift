@@ -18,7 +18,7 @@ class YNSearchMainView: UIView {
     var searchHistoryLabel: UILabel!
     var ynSearchHistoryButtons = [YNSearchHistoryButton]()
     
-    var leftMargin:CGFloat = 15
+    var margin: CGFloat = 15
     var delegate: YNSearchMainViewDelegate?
     
     var ynSerach = YNSerach()
@@ -47,10 +47,14 @@ class YNSearchMainView: UIView {
         self.delegate?.ynSearchHistoryButtonClicked(sender)
     }
     
+    func closeButtonClicked(_ sender: UIButton) {
+
+        
+    }
     
 
     func initView(categories: [String]) {
-        self.categoryLabel = UILabel(frame: CGRect(x: leftMargin, y: 0, width: width - 40, height: 50))
+        self.categoryLabel = UILabel(frame: CGRect(x: margin, y: 0, width: width - 40, height: 50))
         self.categoryLabel.text = "Categories"
         self.categoryLabel.font = UIFont.systemFont(ofSize: 13)
         self.categoryLabel.textColor = UIColor.darkGray
@@ -59,7 +63,7 @@ class YNSearchMainView: UIView {
         let font = UIFont.systemFont(ofSize: 12)
         let userAttributes = [NSFontAttributeName : font, NSForegroundColorAttributeName: UIColor.gray]
         
-        var formerWidth: CGFloat = leftMargin
+        var formerWidth: CGFloat = margin
         var formerHeight: CGFloat = 50
         
         for i in 0..<categories.count {
@@ -68,7 +72,7 @@ class YNSearchMainView: UIView {
                 formerWidth = ynCategoryButtons[i-1].frame.size.width + ynCategoryButtons[i-1].frame.origin.x + 10
                 if formerWidth + size.width + 10 > UIScreen.main.bounds.width {
                     formerHeight += ynCategoryButtons[i-1].frame.size.height + 10
-                    formerWidth = leftMargin
+                    formerWidth = margin
                 }
             }
             let button = YNCategoryButton(frame: CGRect(x: formerWidth, y: formerHeight, width: size.width + 10, height: size.height + 10))
@@ -81,7 +85,7 @@ class YNSearchMainView: UIView {
             
         }
         guard let originY = ynCategoryButtons.last?.frame.origin.y else { return }
-        self.searchHistoryLabel = UILabel(frame: CGRect(x: leftMargin, y: originY + 30, width: width - 40, height: 50))
+        self.searchHistoryLabel = UILabel(frame: CGRect(x: margin, y: originY + 30, width: width - 40, height: 50))
         self.searchHistoryLabel.text = "Search History"
         self.searchHistoryLabel.font = UIFont.systemFont(ofSize: 13)
         self.searchHistoryLabel.textColor = UIColor.darkGray
@@ -91,20 +95,23 @@ class YNSearchMainView: UIView {
     }
     
     func redrawSearchHistoryButtons() {
+        for ynSearchHistoryButton in ynSearchHistoryButtons {
+            ynSearchHistoryButton.removeFromSuperview()
+        }
         let histories = ynSerach.getSearchHistories() ?? [String]()
         
-        let searchHistoryLabelOriginY: CGFloat = searchHistoryLabel.frame.origin.y + 20
+        let searchHistoryLabelOriginY: CGFloat = searchHistoryLabel.frame.origin.y + searchHistoryLabel.frame.height
 
         for i in 0..<histories.count {
-            let button = YNSearchHistoryButton(frame: CGRect(x: leftMargin, y: searchHistoryLabelOriginY + CGFloat(i * 20) , width: width - (leftMargin * 20), height: 40))
+            let button = YNSearchHistoryButton(frame: CGRect(x: margin, y: searchHistoryLabelOriginY + CGFloat(i * 20) , width: width - (margin * 2), height: 40))
             button.addTarget(self, action: #selector(ynSearchHistoryButtonClicked(_:)), for: .touchUpInside)
-            button.setTitle(histories[i], for: .normal)
+            button.closeButton.addTarget(self, action: #selector(closeButtonClicked(_:)), for: .touchUpInside)
+
+            button.textLabel.text = histories[i]
             button.tag = i
             
             ynSearchHistoryButtons.append(button)
             self.addSubview(button)
-            
         }
-
     }
 }

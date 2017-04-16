@@ -25,15 +25,15 @@ class YNCategoryButton: UIButton {
             case true:
                 layer.borderColor = UIColor.lightGray.cgColor
             case false:
-                layer.borderColor = UIColor.gray.cgColor
+                layer.borderColor = UIColor.darkGray.cgColor
             }
         }
     }
     func initVIew() {
-        self.layer.borderColor = UIColor.gray.cgColor
+        self.layer.borderColor = UIColor.darkGray.cgColor
         self.layer.borderWidth = 1
         self.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-        self.setTitleColor(UIColor.gray, for: .normal)
+        self.setTitleColor(UIColor.darkGray, for: .normal)
         self.setTitleColor(UIColor.lightGray, for: .highlighted)
         
     }
