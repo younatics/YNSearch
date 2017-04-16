@@ -40,19 +40,22 @@ class YNSearchMainView: UIView {
 
     
     func ynCategoryButtonClicked(_ sender: UIButton) {
-        self.delegate?.ynCategoryButtonClicked(sender)
+        guard let text = ynCategoryButtons[sender.tag].titleLabel?.text else { return }
+        self.delegate?.ynCategoryButtonClicked(text: text)
     }
     
     func ynSearchHistoryButtonClicked(_ sender: UIButton) {
-        self.delegate?.ynSearchHistoryButtonClicked(sender)
+        guard let text = ynSearchHistoryButtons[sender.tag].textLabel.text else { return }
+        self.delegate?.ynSearchHistoryButtonClicked(text: text)
     }
     
     func closeButtonClicked(_ sender: UIButton) {
-
+        guard let value = ynSearchHistoryButtons[sender.tag].textLabel?.text else { return }
+        ynSerach.deleteSearchHistories(value: value)
         
+        self.redrawSearchHistoryButtons()
     }
     
-
     func initView(categories: [String]) {
         self.categoryLabel = UILabel(frame: CGRect(x: margin, y: 0, width: width - 40, height: 50))
         self.categoryLabel.text = "Categories"
@@ -103,7 +106,7 @@ class YNSearchMainView: UIView {
         let searchHistoryLabelOriginY: CGFloat = searchHistoryLabel.frame.origin.y + searchHistoryLabel.frame.height
 
         for i in 0..<histories.count {
-            let button = YNSearchHistoryButton(frame: CGRect(x: margin, y: searchHistoryLabelOriginY + CGFloat(i * 20) , width: width - (margin * 2), height: 40))
+            let button = YNSearchHistoryButton(frame: CGRect(x: margin, y: searchHistoryLabelOriginY + CGFloat(i * 40) , width: width - (margin * 2), height: 40))
             button.addTarget(self, action: #selector(ynSearchHistoryButtonClicked(_:)), for: .touchUpInside)
             button.closeButton.addTarget(self, action: #selector(closeButtonClicked(_:)), for: .touchUpInside)
 

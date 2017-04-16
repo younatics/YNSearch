@@ -52,6 +52,15 @@ class YNSerach: NSObject {
         pref.synchronize()
     }
     
+    func deleteSearchHistories(value: String) {
+        guard var histories = pref.object(forKey: "histories") as? [String] else { return }
+        guard let index = histories.index(of: value) else { return }
+        histories.remove(at: index)
+        
+        pref.set(value, forKey: "histories")
+        pref.synchronize()
+    }
+    
     func appendSearchHistories(value: String) {
         var histories = [String]()
         if let _histories = pref.object(forKey: "histories") as? [String] {

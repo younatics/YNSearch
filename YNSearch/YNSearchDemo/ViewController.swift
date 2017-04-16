@@ -13,6 +13,8 @@ class ViewController: YNSearchViewController, YNSearchDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,16 +22,27 @@ class ViewController: YNSearchViewController, YNSearchDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    func ynSearchHistoryButtonClicked(_ sender: UIButton) {
-        print(sender.tag)
+    func ynSearchHistoryButtonClicked(text: String) {
+        self.pushViewController(text: text)
+        print(text)
     }
     
-    func ynCategoryButtonClicked(_ sender: UIButton) {
-        print(sender.tag)
+    func ynCategoryButtonClicked(text: String) {
+        self.pushViewController(text: text)
+        print(text)
     }
     
     func ynSearchListViewClicked(text: String) {
+        self.pushViewController(text: text)
         print(text)
+    }
+    
+    func pushViewController(text:String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "detail") as! DetailViewController
+        vc.clickedText = text
+        
+        self.present(vc, animated: true, completion: nil)
     }
     
 

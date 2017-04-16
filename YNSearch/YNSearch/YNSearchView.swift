@@ -32,12 +32,12 @@ class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDelegate {
     }
     
     // MARK: - ynSearchMainView
-    func ynCategoryButtonClicked(_ sender: UIButton) {
-        self.delegate?.ynCategoryButtonClicked(sender)
+    func ynCategoryButtonClicked(text: String) {
+        self.delegate?.ynCategoryButtonClicked(text: text)
     }
     
-    func ynSearchHistoryButtonClicked(_ sender: UIButton) {
-        self.delegate?.ynSearchHistoryButtonClicked(sender)
+    func ynSearchHistoryButtonClicked(text: String) {
+        self.delegate?.ynSearchHistoryButtonClicked(text: text)
     }
     
     func ynSearchListViewClicked(text: String) {

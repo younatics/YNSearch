@@ -55,6 +55,7 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         guard let _database = database else { return }
 
         self.ynSearchListViewDelegate?.ynSearchListViewClicked(text: _database[indexPath.row])
