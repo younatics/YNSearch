@@ -9,28 +9,35 @@
 import UIKit
 
 class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource {
-    var ynSearchListViewDelegate: YNSearchListViewDelegate?
     var database: [String]?
-    
-    var changedText: String? {
+    var ynSerach = YNSerach()
+    var ynSearchTextFieldText: String? {
         didSet {
-            
+            guard let text = ynSearchTextFieldText else { return }
+            self.database = ynSerach.getSearchResult(value: text)
+            if self.database?.count == 0 {
+                self.initData()
+            }
+            self.reloadData()
         }
     }
 
     public override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
         self.initView()
+        self.initData()
         
-        guard let database = YNSerach.shared.getDatabase() else { return }
+    }
+    
+    func initData() {
+        guard let database = ynSerach.getDatabase() else { return }
         self.database = database
-        
+
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
     
     // MARK: - UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,8 +54,10 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
         guard let _database = database else { return }
-        self.ynSearchListViewDelegate?.ynSearchClicked(text: _database[indexPath.row])
+        self.ynSerach.appendSearchHistories(value: _database[indexPath.row])
     }
     
     
@@ -57,7 +66,4 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
         self.dataSource = self
         self.register(YNSearchListViewCell.self, forCellReuseIdentifier: YNSearchListViewCell.ID)
     }
-    
-    
-
 }

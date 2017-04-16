@@ -27,6 +27,15 @@ class YNSerach: NSObject {
         return database
     }
     
+    func getSearchResult(value: String) -> [String]? {
+        guard let searchResult = pref.object(forKey: "database") as? [String] else { return nil }
+        let predicate = NSPredicate(format: "SELF contains %@", value)
+        let searchDataSource = searchResult.filter { predicate.evaluate(with: $0) }
+        
+        return searchDataSource
+    }
+
+    
     func setCategories(value: [String]) {
         pref.set(value, forKey: "categories")
         pref.synchronize()
@@ -43,9 +52,18 @@ class YNSerach: NSObject {
         pref.synchronize()
     }
     
+    func appendSearchHistories(value: String) {
+        guard var histories = pref.object(forKey: "histories") as? [String] else { return }
+        histories.append(value)
+
+        pref.set(histories, forKey: "histories")
+        pref.synchronize()
+    }
+    
     func getSearchHistories() -> [String]? {
         guard let histories = pref.object(forKey: "histories") as? [String] else { return nil }
         return histories
     }
+    
 
 }

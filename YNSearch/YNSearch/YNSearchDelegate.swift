@@ -9,15 +9,14 @@
 import UIKit
 
 public protocol YNSearchMainViewDelegate {
-
     func ynCategoryButtonClicked(_ sender: UIButton)
     
     func ynSearchHistoryButtonClicked(_ sender: UIButton)
 
 }
 
-public protocol YNSearchListViewDelegate {
-    func ynSearchClicked(text: String)
+public protocol YNSearchListViewDelegate {    
+//    func ynSearchTextFieldChanged(text: String)
 }
 
 

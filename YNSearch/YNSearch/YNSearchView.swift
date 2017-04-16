@@ -11,13 +11,6 @@ import UIKit
 class YNSearchView: UIView, YNSearchMainViewDelegate {
     var ynSearchMainView: YNSearchMainView!
     var ynSearchListView: YNSearchListView!
-
-    var ynSearchTextfieldText: String? {
-        didSet {
-            guard let text = ynSearchTextfieldText else { return }
-            self.ynSearchListViewTextChanged(text: text)
-        }
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,13 +27,6 @@ class YNSearchView: UIView, YNSearchMainViewDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    // MARK: - ynSearchListView
-    func ynSearchListViewTextChanged(text: String) {
-        self.ynSearchListView.changedText = text
-
-    }
-    
     
     // MARK: - ynSearchMainView
     func ynCategoryButtonClicked(_ sender: UIButton) {

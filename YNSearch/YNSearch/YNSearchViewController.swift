@@ -18,9 +18,10 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let ynSerach = YNSerach()
         let demoData = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert"]
-        YNSerach.shared.setDatabase(value: demoData)
-        YNSerach.shared.setCategories(value: demoData)
+        ynSerach.setDatabase(value: demoData)
+        ynSerach.setCategories(value: demoData)
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(closeKeyboard)))
         
@@ -34,7 +35,7 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
         
     }
     func ynSearchTextfieldTextChanged(_ textField: UITextField) {
-        self.ynSearchView.ynSearchTextfieldText = textField.text
+        self.ynSearchView.ynSearchListView.ynSearchTextFieldText = textField.text
     }
     func closeKeyboard() {
         self.ynSearchTextfield.endEditing(true)
