@@ -1,6 +1,6 @@
 //
 //  YNSearchViewController.swift
-//  motion-book
+//  YNSearch
 //
 //  Created by YiSeungyoun on 2017. 4. 11..
 //  Copyright © 2017년 SeungyounYi. All rights reserved.
@@ -19,12 +19,7 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let libData = LibraryData()
-        let count = libData.getArraySectionCount()
-        
-        for i in 0..<count {
-            self.categories.append(libData.getTitleOfArrayWithSection(section: i))
-        }
+        self.categories = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert"]
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(closeKeyboard)))
         

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		190F8BB81EA340E5001AD496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BAF1EA340E5001AD496 /* AppDelegate.swift */; };
 		190F8BB91EA340E5001AD496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BB01EA340E5001AD496 /* Assets.xcassets */; };
-		190F8BBA1EA340E5001AD496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BB21EA340E5001AD496 /* LaunchScreen.storyboard */; };
 		190F8BBB1EA340E5001AD496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BB41EA340E5001AD496 /* Main.storyboard */; };
 		190F8BBC1EA340E5001AD496 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BB61EA340E5001AD496 /* Info.plist */; };
 		190F8BBD1EA340E5001AD496 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BB71EA340E5001AD496 /* ViewController.swift */; };
@@ -24,13 +23,13 @@
 		190F8BD21EA341F2001AD496 /* YNCategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BD11EA341F2001AD496 /* YNCategoryButton.swift */; };
 		190F8BDB1EA34257001AD496 /* YNSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BD91EA34257001AD496 /* YNSearchTextField.swift */; };
 		190F8BDC1EA34257001AD496 /* YNSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BDA1EA34257001AD496 /* YNSearchView.swift */; };
+		190F8BDF1EA3435C001AD496 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BDD1EA3435B001AD496 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		190F8B9A1EA34033001AD496 /* YNSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YNSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		190F8BAF1EA340E5001AD496 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = YNSearch/YNSearchDemo/AppDelegate.swift; sourceTree = "<group>"; };
 		190F8BB01EA340E5001AD496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = YNSearch/YNSearchDemo/Assets.xcassets; sourceTree = "<group>"; };
-		190F8BB31EA340E5001AD496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		190F8BB51EA340E5001AD496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		190F8BB61EA340E5001AD496 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = YNSearch/YNSearchDemo/Info.plist; sourceTree = "<group>"; };
 		190F8BB71EA340E5001AD496 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = YNSearch/YNSearchDemo/ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		190F8BD11EA341F2001AD496 /* YNCategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNCategoryButton.swift; sourceTree = "<group>"; };
 		190F8BD91EA34257001AD496 /* YNSearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchTextField.swift; sourceTree = "<group>"; };
 		190F8BDA1EA34257001AD496 /* YNSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchView.swift; sourceTree = "<group>"; };
+		190F8BDE1EA3435C001AD496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 		190F8BB11EA340E5001AD496 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				190F8BB21EA340E5001AD496 /* LaunchScreen.storyboard */,
+				190F8BDD1EA3435B001AD496 /* LaunchScreen.xib */,
 				190F8BB41EA340E5001AD496 /* Main.storyboard */,
 			);
 			name = Base.lproj;
@@ -177,11 +177,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				190F8BDF1EA3435C001AD496 /* LaunchScreen.xib in Resources */,
 				190F8BBC1EA340E5001AD496 /* Info.plist in Resources */,
 				190F8BBB1EA340E5001AD496 /* Main.storyboard in Resources */,
 				190F8BB91EA340E5001AD496 /* Assets.xcassets in Resources */,
 				190F8BCA1EA3416D001AD496 /* YNSearch.xcassets in Resources */,
-				190F8BBA1EA340E5001AD496 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,20 +210,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		190F8BB21EA340E5001AD496 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				190F8BB31EA340E5001AD496 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		190F8BB41EA340E5001AD496 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				190F8BB51EA340E5001AD496 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		190F8BDD1EA3435B001AD496 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				190F8BDE1EA3435C001AD496 /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
