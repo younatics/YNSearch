@@ -94,15 +94,13 @@ class YNSearchMainView: UIView {
             
         }
         guard let originY = ynCategoryButtons.last?.frame.origin.y else { return }
-        self.searchHistoryLabel = UILabel(frame: CGRect(x: margin, y: originY + 30, width: width - 40, height: 50))
+        self.searchHistoryLabel = UILabel(frame: CGRect(x: margin, y: originY + 30, width: width - 40, height: 40))
         self.searchHistoryLabel.text = "Search History"
         self.searchHistoryLabel.font = UIFont.systemFont(ofSize: 13)
         self.searchHistoryLabel.textColor = UIColor.darkGray
         self.addSubview(self.searchHistoryLabel)
         
-        
     }
-    
     
     func redrawSearchHistoryButtons() {
         for ynSearchHistoryView in ynSearchHistoryViews {

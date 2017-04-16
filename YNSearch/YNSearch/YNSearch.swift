@@ -29,9 +29,9 @@ class YNSerach: NSObject {
     
     func getSearchResult(value: String) -> [String]? {
         guard let searchResult = pref.object(forKey: "database") as? [String] else { return nil }
-        let predicate = NSPredicate(format: "SELF contains %@", value)
+        let predicate = NSPredicate(format: "SELF CONTAINS[c] %@", value)
         let searchDataSource = searchResult.filter { predicate.evaluate(with: $0) }
-        
+
         return searchDataSource
     }
 
