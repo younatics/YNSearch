@@ -20,7 +20,7 @@ class ViewController: YNSearchViewController, YNSearchDelegate {
         
         ynSerach.setDatabase(value: demoDatabase)
         ynSerach.setCategories(value: demoCategories)
-        ynSerach.setSearchHistories(value: demoDatabase)
+        ynSerach.setSearchHistories(value: demoSearchHistories)
 
         self.ynSearchinit()
         

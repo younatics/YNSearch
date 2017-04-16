@@ -75,7 +75,7 @@ class YNSearchMainView: UIView {
             let size = categories[i].size(attributes: userAttributes)
             if i > 0 {
                 formerWidth = ynCategoryButtons[i-1].frame.size.width + ynCategoryButtons[i-1].frame.origin.x + 10
-                if formerWidth + size.width + 10 > UIScreen.main.bounds.width {
+                if formerWidth + size.width + margin > UIScreen.main.bounds.width {
                     formerHeight += ynCategoryButtons[i-1].frame.size.height + 10
                     formerWidth = margin
                 }
