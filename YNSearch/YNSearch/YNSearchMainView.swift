@@ -6,7 +6,7 @@
 //  Copyright © 2017년 SeungyounYi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class YNSearchMainView: UIView {
     let width = UIScreen.main.bounds.width

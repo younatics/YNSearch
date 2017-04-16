@@ -21,6 +21,9 @@
 		190F8BCE1EA3416D001AD496 /* YNSearchListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BC61EA3416D001AD496 /* YNSearchListViewCell.swift */; };
 		190F8BCF1EA3416D001AD496 /* YNSearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BC71EA3416D001AD496 /* YNSearchMainView.swift */; };
 		190F8BD01EA3416D001AD496 /* YNSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BC81EA3416D001AD496 /* YNSearchViewController.swift */; };
+		190F8BD21EA341F2001AD496 /* YNCategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BD11EA341F2001AD496 /* YNCategoryButton.swift */; };
+		190F8BDB1EA34257001AD496 /* YNSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BD91EA34257001AD496 /* YNSearchTextField.swift */; };
+		190F8BDC1EA34257001AD496 /* YNSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BDA1EA34257001AD496 /* YNSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		190F8BC61EA3416D001AD496 /* YNSearchListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchListViewCell.swift; sourceTree = "<group>"; };
 		190F8BC71EA3416D001AD496 /* YNSearchMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchMainView.swift; sourceTree = "<group>"; };
 		190F8BC81EA3416D001AD496 /* YNSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchViewController.swift; sourceTree = "<group>"; };
+		190F8BD11EA341F2001AD496 /* YNCategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNCategoryButton.swift; sourceTree = "<group>"; };
+		190F8BD91EA34257001AD496 /* YNSearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchTextField.swift; sourceTree = "<group>"; };
+		190F8BDA1EA34257001AD496 /* YNSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,14 +100,17 @@
 		190F8BC01EA3416D001AD496 /* YNSearch */ = {
 			isa = PBXGroup;
 			children = (
-				190F8BC11EA3416D001AD496 /* YNSearch.swift */,
 				190F8BC21EA3416D001AD496 /* YNSearch.xcassets */,
+				190F8BC81EA3416D001AD496 /* YNSearchViewController.swift */,
+				190F8BC11EA3416D001AD496 /* YNSearch.swift */,
 				190F8BC31EA3416D001AD496 /* YNSearchDelegate.swift */,
+				190F8BD91EA34257001AD496 /* YNSearchTextField.swift */,
+				190F8BDA1EA34257001AD496 /* YNSearchView.swift */,
+				190F8BC71EA3416D001AD496 /* YNSearchMainView.swift */,
+				190F8BD11EA341F2001AD496 /* YNCategoryButton.swift */,
 				190F8BC41EA3416D001AD496 /* YNSearchHistoryButton.swift */,
 				190F8BC51EA3416D001AD496 /* YNSearchListView.swift */,
 				190F8BC61EA3416D001AD496 /* YNSearchListViewCell.swift */,
-				190F8BC71EA3416D001AD496 /* YNSearchMainView.swift */,
-				190F8BC81EA3416D001AD496 /* YNSearchViewController.swift */,
 			);
 			name = YNSearch;
 			path = YNSearch/YNSearch;
@@ -188,9 +197,12 @@
 				190F8BBD1EA340E5001AD496 /* ViewController.swift in Sources */,
 				190F8BCC1EA3416D001AD496 /* YNSearchHistoryButton.swift in Sources */,
 				190F8BB81EA340E5001AD496 /* AppDelegate.swift in Sources */,
+				190F8BDB1EA34257001AD496 /* YNSearchTextField.swift in Sources */,
 				190F8BCD1EA3416D001AD496 /* YNSearchListView.swift in Sources */,
 				190F8BD01EA3416D001AD496 /* YNSearchViewController.swift in Sources */,
 				190F8BCF1EA3416D001AD496 /* YNSearchMainView.swift in Sources */,
+				190F8BDC1EA34257001AD496 /* YNSearchView.swift in Sources */,
+				190F8BD21EA341F2001AD496 /* YNCategoryButton.swift in Sources */,
 				190F8BCE1EA3416D001AD496 /* YNSearchListViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

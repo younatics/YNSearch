@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 class YNSearchViewController: UIViewController, UITextFieldDelegate {
     let width = UIScreen.main.bounds.width
