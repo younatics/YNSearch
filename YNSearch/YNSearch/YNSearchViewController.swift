@@ -30,6 +30,7 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
         let demoData = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert"]
         ynSerach.setDatabase(value: demoData)
         ynSerach.setCategories(value: demoData)
+        ynSerach.setSearchHistories(value: demoData)
         
         self.ynSearchTextfield = YNSearchTextField(frame: CGRect(x: 20, y: 20, width: width-40, height: 50))
         self.ynSearchTextfield.delegate = self

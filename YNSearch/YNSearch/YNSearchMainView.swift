@@ -16,6 +16,7 @@ class YNSearchMainView: UIView {
     var ynCategoryButtons = [YNCategoryButton]()
     
     var searchHistoryLabel: UILabel!
+    var ynSearchHistoryViews = [YNSearchHistoryView]()
     var ynSearchHistoryButtons = [YNSearchHistoryButton]()
     
     var margin: CGFloat = 15
@@ -50,8 +51,7 @@ class YNSearchMainView: UIView {
     }
     
     func closeButtonClicked(_ sender: UIButton) {
-        guard let value = ynSearchHistoryButtons[sender.tag].textLabel?.text else { return }
-        ynSerach.deleteSearchHistories(value: value)
+        ynSerach.deleteSearchHistories(index: sender.tag)
         
         self.redrawSearchHistoryButtons()
     }
@@ -98,23 +98,25 @@ class YNSearchMainView: UIView {
     }
     
     func redrawSearchHistoryButtons() {
-        for ynSearchHistoryButton in ynSearchHistoryButtons {
-            ynSearchHistoryButton.removeFromSuperview()
+        for ynSearchHistoryView in ynSearchHistoryViews {
+            ynSearchHistoryView.removeFromSuperview()
         }
+        
         let histories = ynSerach.getSearchHistories() ?? [String]()
         
         let searchHistoryLabelOriginY: CGFloat = searchHistoryLabel.frame.origin.y + searchHistoryLabel.frame.height
 
         for i in 0..<histories.count {
-            let button = YNSearchHistoryButton(frame: CGRect(x: margin, y: searchHistoryLabelOriginY + CGFloat(i * 40) , width: width - (margin * 2), height: 40))
-            button.addTarget(self, action: #selector(ynSearchHistoryButtonClicked(_:)), for: .touchUpInside)
-            button.closeButton.addTarget(self, action: #selector(closeButtonClicked(_:)), for: .touchUpInside)
+            let view = YNSearchHistoryView(frame: CGRect(x: margin, y: searchHistoryLabelOriginY + CGFloat(i * 40) , width: width - (margin * 2), height: 40))
+            view.ynSearchHistoryButton.addTarget(self, action: #selector(ynSearchHistoryButtonClicked(_:)), for: .touchUpInside)
+            view.closeButton.addTarget(self, action: #selector(closeButtonClicked(_:)), for: .touchUpInside)
 
-            button.textLabel.text = histories[i]
-            button.tag = i
+            view.ynSearchHistoryButton.textLabel.text = histories[i]
+            view.tag = i
             
-            ynSearchHistoryButtons.append(button)
-            self.addSubview(button)
+            ynSearchHistoryViews.append(view)
+            ynSearchHistoryButtons.append(view.ynSearchHistoryButton)
+            self.addSubview(view)
         }
     }
 }

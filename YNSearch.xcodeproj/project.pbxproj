@@ -25,6 +25,7 @@
 		190F8BDC1EA34257001AD496 /* YNSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BDA1EA34257001AD496 /* YNSearchView.swift */; };
 		190F8BDF1EA3435C001AD496 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BDD1EA3435B001AD496 /* LaunchScreen.xib */; };
 		19588FBF1EA377A000157518 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19588FBE1EA377A000157518 /* DetailViewController.swift */; };
+		19588FC11EA38B9700157518 /* YNSearchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19588FC01EA38B9700157518 /* YNSearchExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		190F8BDA1EA34257001AD496 /* YNSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchView.swift; sourceTree = "<group>"; };
 		190F8BDE1EA3435C001AD496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		19588FBE1EA377A000157518 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = YNSearch/YNSearchDemo/DetailViewController.swift; sourceTree = "<group>"; };
+		19588FC01EA38B9700157518 /* YNSearchExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				190F8BC41EA3416D001AD496 /* YNSearchHistoryButton.swift */,
 				190F8BC51EA3416D001AD496 /* YNSearchListView.swift */,
 				190F8BC61EA3416D001AD496 /* YNSearchListViewCell.swift */,
+				19588FC01EA38B9700157518 /* YNSearchExtension.swift */,
 			);
 			name = YNSearch;
 			path = YNSearch/YNSearch;
@@ -205,6 +208,7 @@
 				190F8BCD1EA3416D001AD496 /* YNSearchListView.swift in Sources */,
 				190F8BD01EA3416D001AD496 /* YNSearchViewController.swift in Sources */,
 				190F8BCF1EA3416D001AD496 /* YNSearchMainView.swift in Sources */,
+				19588FC11EA38B9700157518 /* YNSearchExtension.swift in Sources */,
 				190F8BDC1EA34257001AD496 /* YNSearchView.swift in Sources */,
 				190F8BD21EA341F2001AD496 /* YNCategoryButton.swift in Sources */,
 				190F8BCE1EA3416D001AD496 /* YNSearchListViewCell.swift in Sources */,
@@ -274,7 +278,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -319,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

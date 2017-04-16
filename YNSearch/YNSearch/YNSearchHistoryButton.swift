@@ -10,9 +10,7 @@ import UIKit
 
 class YNSearchHistoryButton: UIButton {
     var textLabel: UILabel!
-    var closeButton: UIButton!
-    var bottomLine: UIView!
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -22,15 +20,13 @@ class YNSearchHistoryButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     override var isHighlighted: Bool {
         didSet {
             switch isHighlighted {
             case true:
-                self.bottomLine.backgroundColor = UIColor.lightGray
                 self.textLabel.textColor = UIColor.lightGray
             case false:
-                self.bottomLine.backgroundColor = UIColor.gray
                 self.textLabel.textColor = UIColor.darkGray
             }
         }
@@ -46,6 +42,30 @@ class YNSearchHistoryButton: UIButton {
         self.textLabel.textColor = UIColor.darkGray
         self.addSubview(textLabel)
         
+    }
+
+}
+
+class YNSearchHistoryView: UIView {
+    var ynSearchHistoryButton: YNSearchHistoryButton!
+    var closeButton: UIButton!
+    var bottomLine: UIView!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.initView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    
+    func initView() {
+        self.ynSearchHistoryButton = YNSearchHistoryButton(frame: CGRect(x: 0, y: 0, width: self.frame.width - 15, height: self.frame.height))
+        self.addSubview(ynSearchHistoryButton)
+        
         self.closeButton = UIButton(frame: CGRect(x: self.frame.width - 15, y: (self.frame.height - 15)/2, width: 15, height: 15))
         self.closeButton.setImage(UIImage(named: "close"), for: .normal)
         self.addSubview(closeButton)
@@ -53,6 +73,7 @@ class YNSearchHistoryButton: UIButton {
         self.bottomLine = UIView(frame: CGRect(x: 0, y: self.frame.height-0.5, width: self.frame.width, height: 0.5))
         self.bottomLine.backgroundColor = UIColor.gray
         self.addSubview(bottomLine)
+        
 
     }
     
