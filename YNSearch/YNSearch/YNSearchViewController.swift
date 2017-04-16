@@ -42,14 +42,21 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.ynSearchView.ynSearchMainView.redrawSearchHistoryButtons()
+    }
+    
     func ynSearchTextfieldTextChanged(_ textField: UITextField) {
         self.ynSearchView.ynSearchListView.ynSearchTextFieldText = textField.text
     }
     
     // MARK: - UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let text = textField.text {
+        guard let text = textField.text else { return true }
+        if !text.isEmpty {
             self.ynSerach.appendSearchHistories(value: text)
+            self.ynSearchView.ynSearchMainView.redrawSearchHistoryButtons()
         }
         self.ynSearchTextfield.endEditing(true)
         return true

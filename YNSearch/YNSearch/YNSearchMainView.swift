@@ -18,6 +18,8 @@ class YNSearchMainView: UIView {
     var searchHistoryLabel: UILabel!
     var ynSearchHistoryViews = [YNSearchHistoryView]()
     var ynSearchHistoryButtons = [YNSearchHistoryButton]()
+    var clearHistoryButton: UIButton!
+
     
     var margin: CGFloat = 15
     var delegate: YNSearchMainViewDelegate?
@@ -38,16 +40,21 @@ class YNSearchMainView: UIView {
     override func willMove(toSuperview newSuperview: UIView?) {
         self.redrawSearchHistoryButtons()
     }
-
     
     func ynCategoryButtonClicked(_ sender: UIButton) {
         guard let text = ynCategoryButtons[sender.tag].titleLabel?.text else { return }
+        ynSerach.appendSearchHistories(value: text)
         self.delegate?.ynCategoryButtonClicked(text: text)
     }
     
     func ynSearchHistoryButtonClicked(_ sender: UIButton) {
         guard let text = ynSearchHistoryButtons[sender.tag].textLabel.text else { return }
         self.delegate?.ynSearchHistoryButtonClicked(text: text)
+    }
+    
+    func clearHistoryButtonClicked() {
+        ynSerach.setSearchHistories(value: [String]())
+        self.redrawSearchHistoryButtons()
     }
     
     func closeButtonClicked(_ sender: UIButton) {
@@ -97,9 +104,16 @@ class YNSearchMainView: UIView {
         
     }
     
+    
     func redrawSearchHistoryButtons() {
         for ynSearchHistoryView in ynSearchHistoryViews {
             ynSearchHistoryView.removeFromSuperview()
+        }
+        ynSearchHistoryViews.removeAll()
+        ynSearchHistoryButtons.removeAll()
+
+        if self.clearHistoryButton != nil {
+            self.clearHistoryButton.removeFromSuperview()
         }
         
         let histories = ynSerach.getSearchHistories() ?? [String]()
@@ -112,11 +126,21 @@ class YNSearchMainView: UIView {
             view.closeButton.addTarget(self, action: #selector(closeButtonClicked(_:)), for: .touchUpInside)
 
             view.ynSearchHistoryButton.textLabel.text = histories[i]
-            view.tag = i
+            view.ynSearchHistoryButton.tag = i
             
             ynSearchHistoryViews.append(view)
             ynSearchHistoryButtons.append(view.ynSearchHistoryButton)
             self.addSubview(view)
         }
+        guard let lastHistoryView = self.ynSearchHistoryViews.last else { return }
+        
+        self.clearHistoryButton = UIButton(frame: CGRect(x: margin, y: lastHistoryView.frame.origin.y + lastHistoryView.frame.height, width: width - (margin * 2), height: 40))
+        self.clearHistoryButton.setTitle("Clear serach history", for: .normal)
+        self.clearHistoryButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+        self.clearHistoryButton.setTitleColor(UIColor.darkGray, for: .normal)
+        self.clearHistoryButton.setTitleColor(UIColor.lightGray, for: .highlighted)
+        self.clearHistoryButton.addTarget(self, action: #selector(clearHistoryButtonClicked), for: .touchUpInside)
+        self.addSubview(clearHistoryButton)
+        
     }
 }
