@@ -59,7 +59,6 @@ class YNSearchMainView: UIView {
     
     func closeButtonClicked(_ sender: UIButton) {
         ynSerach.deleteSearchHistories(index: sender.tag)
-        
         self.redrawSearchHistoryButtons()
     }
     
@@ -127,6 +126,7 @@ class YNSearchMainView: UIView {
 
             view.ynSearchHistoryButton.textLabel.text = histories[i]
             view.ynSearchHistoryButton.tag = i
+            view.closeButton.tag = i
             
             ynSearchHistoryViews.append(view)
             ynSearchHistoryButtons.append(view.ynSearchHistoryButton)

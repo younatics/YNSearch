@@ -30,5 +30,35 @@ class YNSearchTextField: UITextField {
         self.leftView = searchImageViewWrapper
         self.returnKeyType = .search
         self.placeholder = "Search libraries what you want"
+        self.font = UIFont.systemFont(ofSize: 14)
     }
+}
+
+class YNSearchTextFieldView: UIView {
+    var ynSearchTextField: YNSearchTextField!
+    var cancelButton: UIButton!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.initView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func initView() {
+        self.ynSearchTextField = YNSearchTextField(frame: CGRect(x: 0, y: 0, width: self.frame.width - 50, height: self.frame.height))
+        self.addSubview(self.ynSearchTextField)
+        
+        self.cancelButton = UIButton(frame: CGRect(x: self.frame.width - 40, y: 0, width: 50, height: self.frame.height))
+        self.cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        self.cancelButton.setTitleColor(UIColor.darkGray, for: .normal)
+        self.cancelButton.setTitleColor(UIColor.lightGray, for: .highlighted)
+        self.cancelButton.setTitle("Cancel", for: .normal)
+        self.cancelButton.isHidden = true
+        self.addSubview(self.cancelButton)
+    }
+
 }
