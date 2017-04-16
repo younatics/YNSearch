@@ -10,12 +10,13 @@ import UIKit
 
 class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource {
     var database: [String]?
+    var ynSearchListViewDelegate: YNSearchListViewDelegate?
     var ynSerach = YNSerach()
     var ynSearchTextFieldText: String? {
         didSet {
             guard let text = ynSearchTextFieldText else { return }
             self.database = ynSerach.getSearchResult(value: text)
-            if self.database?.count == 0 {
+            if text.isEmpty {
                 self.initData()
             }
             self.reloadData()
@@ -54,7 +55,7 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.ynSearchListViewDelegate?.ynSearchListViewClicked(text: "dqd")
         
         guard let _database = database else { return }
         self.ynSerach.appendSearchHistories(value: _database[indexPath.row])

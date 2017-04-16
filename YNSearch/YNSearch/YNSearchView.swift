@@ -8,7 +8,9 @@
 
 import UIKit
 
-class YNSearchView: UIView, YNSearchMainViewDelegate {
+class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDelegate {
+
+    var delegate: YNSearchDelegate?
     var ynSearchMainView: YNSearchMainView!
     var ynSearchListView: YNSearchListView!
     
@@ -20,6 +22,7 @@ class YNSearchView: UIView, YNSearchMainViewDelegate {
         self.addSubview(self.ynSearchMainView)
         
         self.ynSearchListView = YNSearchListView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
+        self.ynSearchListView.ynSearchListViewDelegate = self
         self.ynSearchListView.isHidden = true
         self.addSubview(self.ynSearchListView)
     }
@@ -30,11 +33,16 @@ class YNSearchView: UIView, YNSearchMainViewDelegate {
     
     // MARK: - ynSearchMainView
     func ynCategoryButtonClicked(_ sender: UIButton) {
-        
+        self.delegate?.ynCategoryButtonClicked(sender)
     }
     
     func ynSearchHistoryButtonClicked(_ sender: UIButton) {
-        
+        self.delegate?.ynSearchHistoryButtonClicked(sender)
     }
+    
+    func ynSearchListViewClicked(text: String) {
+        self.delegate?.ynSearchListViewClicked(text: text)
+    }
+
 
 }

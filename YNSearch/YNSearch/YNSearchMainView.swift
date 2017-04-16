@@ -20,6 +20,8 @@ class YNSearchMainView: UIView {
     
     var leftMargin:CGFloat = 15
     var delegate: YNSearchMainViewDelegate?
+    
+    var ynSerach = YNSerach()
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,8 +43,7 @@ class YNSearchMainView: UIView {
     }
     
     func histories() -> [String]{
-        let settings = YNSerach()
-        return settings.getSearchHistories() ?? [String]()
+        return ynSerach.getSearchHistories() ?? [String]()
     }
 
     func initView(categories: [String]) {

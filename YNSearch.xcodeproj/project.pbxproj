@@ -89,10 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				190F8BAF1EA340E5001AD496 /* AppDelegate.swift */,
+				190F8BB71EA340E5001AD496 /* ViewController.swift */,
 				190F8BB01EA340E5001AD496 /* Assets.xcassets */,
 				190F8BB11EA340E5001AD496 /* Base.lproj */,
 				190F8BB61EA340E5001AD496 /* Info.plist */,
-				190F8BB71EA340E5001AD496 /* ViewController.swift */,
 			);
 			name = YNSearchDemo;
 			sourceTree = "<group>";

@@ -8,6 +8,9 @@
 
 import UIKit
 
+public protocol YNSearchDelegate: YNSearchMainViewDelegate, YNSearchListViewDelegate {
+}
+
 public protocol YNSearchMainViewDelegate {
     func ynCategoryButtonClicked(_ sender: UIButton)
     
@@ -16,7 +19,7 @@ public protocol YNSearchMainViewDelegate {
 }
 
 public protocol YNSearchListViewDelegate {    
-//    func ynSearchTextFieldChanged(text: String)
+    func ynSearchListViewClicked(text: String)
 }
 
 

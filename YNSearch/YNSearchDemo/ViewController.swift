@@ -8,17 +8,30 @@
 
 import UIKit
 
-class ViewController: YNSearchViewController {
+class ViewController: YNSearchViewController, YNSearchDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    func ynSearchHistoryButtonClicked(_ sender: UIButton) {
+        print(sender.tag)
+    }
+    
+    func ynCategoryButtonClicked(_ sender: UIButton) {
+        print(sender.tag)
+    }
+    
+    func ynSearchListViewClicked(text: String) {
+        print(text)
+    }
+    
 
 
 }

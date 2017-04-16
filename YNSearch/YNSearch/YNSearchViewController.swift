@@ -9,6 +9,12 @@
 import UIKit
 
 class YNSearchViewController: UIViewController, UITextFieldDelegate {
+    var delegate: YNSearchDelegate? {
+        didSet {
+            self.ynSearchView.delegate = delegate
+        }
+    }
+    
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
     
@@ -23,8 +29,6 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
         ynSerach.setDatabase(value: demoData)
         ynSerach.setCategories(value: demoData)
         
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(closeKeyboard)))
-        
         self.ynSearchTextfield = YNSearchTextField(frame: CGRect(x: 20, y: 20, width: width-40, height: 50))
         self.ynSearchTextfield.delegate = self
         self.ynSearchTextfield.addTarget(self, action: #selector(ynSearchTextfieldTextChanged(_:)), for: .editingChanged)
@@ -34,14 +38,17 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(self.ynSearchView)
         
     }
+    
     func ynSearchTextfieldTextChanged(_ textField: UITextField) {
         self.ynSearchView.ynSearchListView.ynSearchTextFieldText = textField.text
     }
-    func closeKeyboard() {
-        self.ynSearchTextfield.endEditing(true)
-    }
     
     // MARK: - UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.ynSearchTextfield.endEditing(true)
+        return true
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         UIView.animate(withDuration: 0.3, animations: { 
             self.ynSearchView.ynSearchMainView.alpha = 0

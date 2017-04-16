@@ -28,7 +28,7 @@ class YNSearchTextField: UITextField {
         searchImageViewWrapper.addSubview(searchImageView)
         
         self.leftView = searchImageViewWrapper
-        
+        self.returnKeyType = .search
         self.placeholder = "Search libraries what you want"
     }
 }
