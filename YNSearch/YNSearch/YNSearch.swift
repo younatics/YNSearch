@@ -53,7 +53,10 @@ class YNSerach: NSObject {
     }
     
     func appendSearchHistories(value: String) {
-        guard var histories = pref.object(forKey: "histories") as? [String] else { return }
+        var histories = [String]()
+        if let _histories = pref.object(forKey: "histories") as? [String] {
+            histories = _histories
+        }
         histories.append(value)
 
         pref.set(histories, forKey: "histories")

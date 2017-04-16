@@ -24,6 +24,7 @@
 		190F8BDB1EA34257001AD496 /* YNSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BD91EA34257001AD496 /* YNSearchTextField.swift */; };
 		190F8BDC1EA34257001AD496 /* YNSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BDA1EA34257001AD496 /* YNSearchView.swift */; };
 		190F8BDF1EA3435C001AD496 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BDD1EA3435B001AD496 /* LaunchScreen.xib */; };
+		19588FBF1EA377A000157518 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19588FBE1EA377A000157518 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		190F8BD91EA34257001AD496 /* YNSearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchTextField.swift; sourceTree = "<group>"; };
 		190F8BDA1EA34257001AD496 /* YNSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchView.swift; sourceTree = "<group>"; };
 		190F8BDE1EA3435C001AD496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		19588FBE1EA377A000157518 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = YNSearch/YNSearchDemo/DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				190F8BAF1EA340E5001AD496 /* AppDelegate.swift */,
 				190F8BB71EA340E5001AD496 /* ViewController.swift */,
+				19588FBE1EA377A000157518 /* DetailViewController.swift */,
 				190F8BB01EA340E5001AD496 /* Assets.xcassets */,
 				190F8BB11EA340E5001AD496 /* Base.lproj */,
 				190F8BB61EA340E5001AD496 /* Info.plist */,
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19588FBF1EA377A000157518 /* DetailViewController.swift in Sources */,
 				190F8BC91EA3416D001AD496 /* YNSearch.swift in Sources */,
 				190F8BCB1EA3416D001AD496 /* YNSearchDelegate.swift in Sources */,
 				190F8BBD1EA340E5001AD496 /* ViewController.swift in Sources */,

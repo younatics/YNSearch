@@ -21,6 +21,8 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
     var ynSearchTextfield: YNSearchTextField!
     var ynSearchView: YNSearchView!
     
+    var ynSerach = YNSerach()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +47,9 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text {
+            self.ynSerach.appendSearchHistories(value: text)
+        }
         self.ynSearchTextfield.endEditing(true)
         return true
     }

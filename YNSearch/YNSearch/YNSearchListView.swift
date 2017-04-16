@@ -55,9 +55,9 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.ynSearchListViewDelegate?.ynSearchListViewClicked(text: "dqd")
-        
         guard let _database = database else { return }
+
+        self.ynSearchListViewDelegate?.ynSearchListViewClicked(text: _database[indexPath.row])
         self.ynSerach.appendSearchHistories(value: _database[indexPath.row])
     }
     

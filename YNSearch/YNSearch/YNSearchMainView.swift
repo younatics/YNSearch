@@ -34,6 +34,11 @@ class YNSearchMainView: UIView {
         super.init(coder: aDecoder)
     }
     
+    override func willMove(toSuperview newSuperview: UIView?) {
+        self.redrawSearchHistoryButtons()
+    }
+
+    
     func ynCategoryButtonClicked(_ sender: UIButton) {
         self.delegate?.ynCategoryButtonClicked(sender)
     }
@@ -42,9 +47,7 @@ class YNSearchMainView: UIView {
         self.delegate?.ynSearchHistoryButtonClicked(sender)
     }
     
-    func histories() -> [String]{
-        return ynSerach.getSearchHistories() ?? [String]()
-    }
+    
 
     func initView(categories: [String]) {
         self.categoryLabel = UILabel(frame: CGRect(x: leftMargin, y: 0, width: width - 40, height: 50))
@@ -84,18 +87,24 @@ class YNSearchMainView: UIView {
         self.searchHistoryLabel.textColor = UIColor.darkGray
         self.addSubview(self.searchHistoryLabel)
         
+        
+    }
+    
+    func redrawSearchHistoryButtons() {
+        let histories = ynSerach.getSearchHistories() ?? [String]()
+        
         let searchHistoryLabelOriginY: CGFloat = searchHistoryLabel.frame.origin.y + 20
-        
-        let histories = self.histories()
-        
+
         for i in 0..<histories.count {
             let button = YNSearchHistoryButton(frame: CGRect(x: leftMargin, y: searchHistoryLabelOriginY + CGFloat(i * 20) , width: width - (leftMargin * 20), height: 40))
             button.addTarget(self, action: #selector(ynSearchHistoryButtonClicked(_:)), for: .touchUpInside)
+            button.setTitle(histories[i], for: .normal)
             button.tag = i
             
             ynSearchHistoryButtons.append(button)
             self.addSubview(button)
             
         }
+
     }
 }
