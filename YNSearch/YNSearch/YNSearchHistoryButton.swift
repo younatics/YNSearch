@@ -9,9 +9,9 @@
 import UIKit
 
 open class YNSearchHistoryView: UIView {
-    var ynSearchHistoryButton: YNSearchHistoryButton!
-    var closeButton: UIButton!
-    var bottomLine: UIView!
+    open var ynSearchHistoryButton: YNSearchHistoryButton!
+    open var closeButton: UIButton!
+    open var bottomLine: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,7 +39,7 @@ open class YNSearchHistoryView: UIView {
 }
 
 open class YNSearchHistoryButton: UIButton {
-    var textLabel: UILabel!
+    open var textLabel: UILabel!
 
     override init(frame: CGRect) {
         super.init(frame: frame)

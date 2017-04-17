@@ -10,9 +10,9 @@ import UIKit
 
 open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource {
     var database: [String]?
-    var ynSearchListViewDelegate: YNSearchListViewDelegate?
-    var ynSearch = YNSearch()
-    var ynSearchTextFieldText: String? {
+    open var ynSearchListViewDelegate: YNSearchListViewDelegate?
+    open var ynSearch = YNSearch()
+    open var ynSearchTextFieldText: String? {
         didSet {
             guard let text = ynSearchTextFieldText else { return }
             self.database = ynSearch.getSearchResult(value: text)

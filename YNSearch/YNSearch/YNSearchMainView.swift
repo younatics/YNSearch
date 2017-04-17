@@ -12,19 +12,19 @@ open class YNSearchMainView: UIView {
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
 
-    var categoryLabel: UILabel!
-    var ynCategoryButtons = [YNCategoryButton]()
+    open var categoryLabel: UILabel!
+    open var ynCategoryButtons = [YNCategoryButton]()
     
-    var searchHistoryLabel: UILabel!
-    var ynSearchHistoryViews = [YNSearchHistoryView]()
-    var ynSearchHistoryButtons = [YNSearchHistoryButton]()
-    var clearHistoryButton: UIButton!
+    open var searchHistoryLabel: UILabel!
+    open var ynSearchHistoryViews = [YNSearchHistoryView]()
+    open var ynSearchHistoryButtons = [YNSearchHistoryButton]()
+    open var clearHistoryButton: UIButton!
 
     
     var margin: CGFloat = 15
-    var delegate: YNSearchMainViewDelegate?
+    open var delegate: YNSearchMainViewDelegate?
     
-    var ynSearch = YNSearch()
+    open var ynSearch = YNSearch()
 
     public override init(frame: CGRect) {
         super.init(frame: frame)

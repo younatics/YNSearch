@@ -9,12 +9,12 @@
 import UIKit
 
 open class YNSearchListViewCell: UITableViewCell {
-    static let ID = "YNSearchListViewCell"
+    open static let ID = "YNSearchListViewCell"
     
     var leftMargin = 15
     
-    var searchImageView: UIImageView!
-    var searchLabel: UILabel!
+    open var searchImageView: UIImageView!
+    open var searchLabel: UILabel!
         
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

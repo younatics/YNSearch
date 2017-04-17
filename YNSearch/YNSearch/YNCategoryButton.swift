@@ -15,7 +15,7 @@ public enum YNCategoryButtonType {
 }
 
 open class YNCategoryButton: UIButton {
-    var type: YNCategoryButtonType? {
+    open var type: YNCategoryButtonType? {
         didSet {
             guard let _type = type else { return }
             self.setType(type: _type)

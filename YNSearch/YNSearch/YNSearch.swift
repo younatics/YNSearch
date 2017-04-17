@@ -11,9 +11,9 @@ import UIKit
 open class YNSearch: NSObject {
     var pref: UserDefaults!
     
-    static let shared: YNSearch = YNSearch()
+    open static let shared: YNSearch = YNSearch()
 
-    override init() {
+    public override init() {
         pref = UserDefaults.standard
     }
     

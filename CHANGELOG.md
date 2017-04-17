@@ -1,4 +1,7 @@
 # Updates
+## [v0.2.1](https://github.com/younatics/YNSearch/releases/tag/0.2.1)
+* Change method to open again
+
 ## [v0.2.0](https://github.com/younatics/YNSearch/releases/tag/0.2.0)
 * Change method to open
 

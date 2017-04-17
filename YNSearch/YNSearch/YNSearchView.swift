@@ -12,9 +12,9 @@ open class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDeleg
 
     open var delegate: YNSearchDelegate?
     
-    var ynScrollView: UIScrollView!
-    var ynSearchMainView: YNSearchMainView!
-    var ynSearchListView: YNSearchListView!
+    open var ynScrollView: UIScrollView!
+    open var ynSearchMainView: YNSearchMainView!
+    open var ynSearchListView: YNSearchListView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

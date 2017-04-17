@@ -35,8 +35,8 @@ open class YNSearchTextField: UITextField {
 }
 
 open class YNSearchTextFieldView: UIView {
-    var ynSearchTextField: YNSearchTextField!
-    var cancelButton: UIButton!
+    open var ynSearchTextField: YNSearchTextField!
+    open var cancelButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)

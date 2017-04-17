@@ -24,7 +24,7 @@ public protocol YNSearchListViewDelegate {
     
 }
 
-extension YNSearchMainViewDelegate {
+public extension YNSearchMainViewDelegate {
     func ynSearchMainViewSearchHistoryChanged() { }
 }
 
