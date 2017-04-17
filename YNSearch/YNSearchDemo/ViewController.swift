@@ -28,7 +28,7 @@ class ViewController: YNSearchViewController, YNSearchDelegate {
         self.delegate = self
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
-//        self.ynSearchView.ynSearchMainView.setYNCategoryButtonType(type: .colorful)
+        self.ynSearchView.ynSearchMainView.setYNCategoryButtonType(type: .colorful)
 
     }
 

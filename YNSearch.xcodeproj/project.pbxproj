@@ -26,6 +26,8 @@
 		190F8BDF1EA3435C001AD496 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BDD1EA3435B001AD496 /* LaunchScreen.xib */; };
 		19588FBF1EA377A000157518 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19588FBE1EA377A000157518 /* DetailViewController.swift */; };
 		19588FC11EA38B9700157518 /* YNSearchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19588FC01EA38B9700157518 /* YNSearchExtension.swift */; };
+		19BE85A41EA4757800D59D4A /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 19BE85A21EA4757800D59D4A /* CHANGELOG.md */; };
+		19BE85A51EA4757800D59D4A /* YNSearch.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 19BE85A31EA4757800D59D4A /* YNSearch.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		190F8BDE1EA3435C001AD496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		19588FBE1EA377A000157518 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = YNSearch/YNSearchDemo/DetailViewController.swift; sourceTree = "<group>"; };
 		19588FC01EA38B9700157518 /* YNSearchExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchExtension.swift; sourceTree = "<group>"; };
+		19BE85A21EA4757800D59D4A /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = SOURCE_ROOT; };
+		19BE85A31EA4757800D59D4A /* YNSearch.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YNSearch.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 		190F8BC01EA3416D001AD496 /* YNSearch */ = {
 			isa = PBXGroup;
 			children = (
+				19BE85A21EA4757800D59D4A /* CHANGELOG.md */,
+				19BE85A31EA4757800D59D4A /* YNSearch.podspec */,
 				190F8BC21EA3416D001AD496 /* YNSearch.xcassets */,
 				190F8BC81EA3416D001AD496 /* YNSearchViewController.swift */,
 				190F8BC11EA3416D001AD496 /* YNSearch.swift */,
@@ -186,6 +192,7 @@
 				190F8BDF1EA3435C001AD496 /* LaunchScreen.xib in Resources */,
 				190F8BBC1EA340E5001AD496 /* Info.plist in Resources */,
 				190F8BBB1EA340E5001AD496 /* Main.storyboard in Resources */,
+				19BE85A51EA4757800D59D4A /* YNSearch.podspec in Resources */,
 				190F8BB91EA340E5001AD496 /* Assets.xcassets in Resources */,
 				190F8BCA1EA3416D001AD496 /* YNSearch.xcassets in Resources */,
 			);
@@ -199,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19588FBF1EA377A000157518 /* DetailViewController.swift in Sources */,
+				19BE85A41EA4757800D59D4A /* CHANGELOG.md in Sources */,
 				190F8BC91EA3416D001AD496 /* YNSearch.swift in Sources */,
 				190F8BCB1EA3416D001AD496 /* YNSearchDelegate.swift in Sources */,
 				190F8BBD1EA340E5001AD496 /* ViewController.swift in Sources */,
