@@ -1,7 +1,5 @@
 # YNSearch
 
-![title](Images/title.png)
-
 [![Version](https://img.shields.io/cocoapods/v/YNSearch.svg?style=flat)](http://cocoapods.org/pods/YNSearch)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods](https://img.shields.io/cocoapods/metrics/doc-percent/YNSearch.svg)](http://cocoadocs.org/docsets/YNSearch)
