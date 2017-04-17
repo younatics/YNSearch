@@ -10,10 +10,12 @@
 See [CHANGELOG](https://github.com/younatics/YNDropDownMenu/blob/master/CHANGELOG.md) for details
 
 ## Intoduction
-Awesome search view, written in Swift 3, appears search view like Pinterest Search view. You can fully customizable this library
+Awesome search view, written in Swift 3, appears search view like Pinterest Search view. You can fully customizable this library.
 
-![demo](Images/YNSearch.png)
-![demo2](Images/YNSearch.gif)
+![demo](Images/YNSearch.gif)
+![demo2](Images/YNSearch1.png)
+![demo3](Images/YNSearch2.png)
+![demo4](Images/YNSearch3.png)
 
 ## Requirements
 
@@ -46,8 +48,9 @@ ynSearch.setCategories(value: demoDatabase)
 ynSearch.setSearchHistories(value: demoDatabase)
 
 self.ynSearchinit()
-
 ```
+Done!
+
 ## View Hierachy
 ```
 YNSearchViewController: Inherit this viewcontroller 
@@ -67,4 +70,36 @@ YNSearchViewController: Inherit this viewcontroller
 |   |-- YNSearchListView: UITableview with search result
 ```
 
+## Custom Usage
+set `YNSearchDelegate` if you want callback
+```Swift 
+self.delegate = self
 
+func ynSearchHistoryButtonClicked(text: String) {
+  print(text)
+}
+    
+func ynCategoryButtonClicked(text: String) {
+  print(text)
+}
+    
+func ynSearchListViewClicked(text: String) {
+  print(text)
+}
+```
+
+Set `YNCategoryButton` type.
+```Swift
+self.ynSearchView.ynSearchMainView.setYNCategoryButtonType(type: .colorful)
+```
+
+#### You can fully customizable this `YNSearch` based on view hierachy
+
+## References
+#### Please tell me or make pull request if you use this library in your application :) 
+
+## Author
+[younatics 🇰🇷](http://younatics.github.io)
+
+## License
+YNDropDownMenu is available under the MIT license. See the LICENSE file for more info.
