@@ -50,6 +50,22 @@ self.ynSearchinit()
 
 ```
 ## View Hierachy
-
+```
+YNSearchViewController: UIViewController
+|-- YNSearchTextFieldView
+|   |-- YNSearchTextField
+|   |-- cancelButton
+|
+|-- YNSearchView 
+|   |-- YNSearchMainView
+|   |   |-- categoryLabel
+|   |   |-- [YNCategoryButton]
+|   |   |-- searchHistoryLabel
+|   |   |-- [YNSearchHistoryView]
+|   |   |   |-- [YNSearchHistoryButton]
+|   |   |   |-- [closeButton]
+|   |
+|   |-- YNSearchListView
+```
 
 
