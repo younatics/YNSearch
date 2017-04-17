@@ -102,4 +102,4 @@ self.ynSearchView.ynSearchMainView.setYNCategoryButtonType(type: .colorful)
 [younatics 🇰🇷](http://younatics.github.io)
 
 ## License
-YNDropDownMenu is available under the MIT license. See the LICENSE file for more info.
+YNSearch is available under the MIT license. See the LICENSE file for more info.
