@@ -51,21 +51,21 @@ self.ynSearchinit()
 ```
 ## View Hierachy
 ```
-YNSearchViewController: UIViewController
-|-- YNSearchTextFieldView
-|   |-- YNSearchTextField
-|   |-- cancelButton
+YNSearchViewController: Inherit this viewcontroller 
+|-- YNSearchTextFieldView: YNSearchTextField with cancel button
+|   |-- YNSearchTextField: Search UITextfield
+|   |-- cancelButton: Show when YNSearchTextField textFieldDidBeginEditing
 |
-|-- YNSearchView 
-|   |-- YNSearchMainView
-|   |   |-- categoryLabel
-|   |   |-- [YNCategoryButton]
-|   |   |-- searchHistoryLabel
-|   |   |-- [YNSearchHistoryView]
-|   |   |   |-- [YNSearchHistoryButton]
-|   |   |   |-- [closeButton]
+|-- YNSearchView : get both YNSearchMainView and YNSearchListView
+|   |-- YNSearchMainView: First view that you can see
+|   |   |-- categoryLabel: Cateogry label
+|   |   |-- [YNCategoryButton]: cateogory buttons
+|   |   |-- searchHistoryLabel: Search history label
+|   |   |-- [YNSearchHistoryView]: history views
+|   |   |   |-- [YNSearchHistoryButton]: Search history button
+|   |   |   |-- [closeButton]: Close button
 |   |
-|   |-- YNSearchListView
+|   |-- YNSearchListView: UITableview with search result
 ```
 
 
