@@ -37,6 +37,13 @@ class YNSearchMainView: UIView {
         super.init(coder: aDecoder)
     }
     
+    
+    func setYNCategoryButtonType(type: YNCategoryButtonType) {
+        for ynCategoryButton in self.ynCategoryButtons {
+            ynCategoryButton.type = type
+        }
+    }
+    
     func ynCategoryButtonClicked(_ sender: UIButton) {
         guard let text = ynCategoryButtons[sender.tag].titleLabel?.text else { return }
         ynSearch.appendSearchHistories(value: text)

@@ -31,8 +31,8 @@ class YNSearchHistoryView: UIView {
         self.closeButton.setImage(UIImage(named: "close"), for: .normal)
         self.addSubview(closeButton)
         
-        self.bottomLine = UIView(frame: CGRect(x: 0, y: self.frame.height-0.5, width: self.frame.width, height: 0.5))
-        self.bottomLine.backgroundColor = UIColor.lightGray
+        self.bottomLine = UIView(frame: CGRect(x: 0, y: self.frame.height-1, width: self.frame.width, height: 1))
+        self.bottomLine.backgroundColor = UIColor.init(colorLiteralRed: 242/255, green: 242/255, blue: 242/255, alpha: 1)
         self.addSubview(bottomLine)
         
     }
@@ -55,7 +55,7 @@ class YNSearchHistoryButton: UIButton {
         didSet {
             switch isHighlighted {
             case true:
-                self.textLabel.textColor = UIColor.lightGray
+                self.textLabel.textColor = UIColor.darkGray.withAlphaComponent(0.3)
             case false:
                 self.textLabel.textColor = UIColor.darkGray
             }

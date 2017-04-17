@@ -19,7 +19,6 @@ class YNSearch: NSObject {
     
     func setDatabase(value: [String]) {
         pref.set(value, forKey: "database")
-        pref.synchronize()
     }
     
     func getDatabase() -> [String]? {
@@ -38,7 +37,6 @@ class YNSearch: NSObject {
     
     func setCategories(value: [String]) {
         pref.set(value, forKey: "categories")
-        pref.synchronize()
     }
     
     func getCategories() -> [String]? {
@@ -49,7 +47,6 @@ class YNSearch: NSObject {
 
     func setSearchHistories(value: [String]) {
         pref.set(value, forKey: "histories")
-        pref.synchronize()
     }
     
     func deleteSearchHistories(index: Int) {
@@ -57,7 +54,6 @@ class YNSearch: NSObject {
         histories.remove(at: index)
         
         pref.set(histories, forKey: "histories")
-        pref.synchronize()
     }
     
     func appendSearchHistories(value: String) {
@@ -68,7 +64,6 @@ class YNSearch: NSObject {
         histories.append(value)
 
         pref.set(histories, forKey: "histories")
-        pref.synchronize()
     }
     
     func getSearchHistories() -> [String]? {
