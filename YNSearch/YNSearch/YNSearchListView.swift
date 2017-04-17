@@ -11,11 +11,11 @@ import UIKit
 class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource {
     var database: [String]?
     var ynSearchListViewDelegate: YNSearchListViewDelegate?
-    var ynSerach = YNSerach()
+    var ynSearch = YNSearch()
     var ynSearchTextFieldText: String? {
         didSet {
             guard let text = ynSearchTextFieldText else { return }
-            self.database = ynSerach.getSearchResult(value: text)
+            self.database = ynSearch.getSearchResult(value: text)
             if text.isEmpty {
                 self.initData()
             }
@@ -31,7 +31,7 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
     }
     
     func initData() {
-        guard let database = ynSerach.getDatabase() else { return }
+        guard let database = ynSearch.getDatabase() else { return }
         self.database = database
 
     }
@@ -59,7 +59,7 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
         guard let _database = database else { return }
 
         self.ynSearchListViewDelegate?.ynSearchListViewClicked(text: _database[indexPath.row])
-        self.ynSerach.appendSearchHistories(value: _database[indexPath.row])
+        self.ynSearch.appendSearchHistories(value: _database[indexPath.row])
     }
     
     

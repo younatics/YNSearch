@@ -24,12 +24,12 @@ class YNSearchMainView: UIView {
     var margin: CGFloat = 15
     var delegate: YNSearchMainViewDelegate?
     
-    var ynSerach = YNSerach()
+    var ynSearch = YNSearch()
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
-        guard let categories = YNSerach.shared.getCategories() else { return }
+        guard let categories = YNSearch.shared.getCategories() else { return }
         self.initView(categories: categories)
     }
     
@@ -39,7 +39,7 @@ class YNSearchMainView: UIView {
     
     func ynCategoryButtonClicked(_ sender: UIButton) {
         guard let text = ynCategoryButtons[sender.tag].titleLabel?.text else { return }
-        ynSerach.appendSearchHistories(value: text)
+        ynSearch.appendSearchHistories(value: text)
         self.delegate?.ynCategoryButtonClicked(text: text)
     }
     
@@ -49,12 +49,12 @@ class YNSearchMainView: UIView {
     }
     
     func clearHistoryButtonClicked() {
-        ynSerach.setSearchHistories(value: [String]())
+        ynSearch.setSearchHistories(value: [String]())
         self.redrawSearchHistoryButtons()
     }
     
     func closeButtonClicked(_ sender: UIButton) {
-        ynSerach.deleteSearchHistories(index: sender.tag)
+        ynSearch.deleteSearchHistories(index: sender.tag)
         self.redrawSearchHistoryButtons()
     }
     
@@ -109,7 +109,7 @@ class YNSearchMainView: UIView {
             self.clearHistoryButton.removeFromSuperview()
         }
         
-        let histories = ynSerach.getSearchHistories() ?? [String]()
+        let histories = ynSearch.getSearchHistories() ?? [String]()
         
         let searchHistoryLabelOriginY: CGFloat = searchHistoryLabel.frame.origin.y + searchHistoryLabel.frame.height
 

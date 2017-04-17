@@ -21,7 +21,7 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
     var ynSearchTextfieldView: YNSearchTextFieldView!
     var ynSearchView: YNSearchView!
     
-    var ynSerach = YNSerach()
+    var ynSerach = YNSearch()
 
     override func viewDidLoad() {
         super.viewDidLoad()

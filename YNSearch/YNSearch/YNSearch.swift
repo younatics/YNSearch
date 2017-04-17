@@ -8,10 +8,10 @@
 
 import UIKit
 
-class YNSerach: NSObject {
+class YNSearch: NSObject {
     var pref: UserDefaults!
     
-    static let shared: YNSerach = YNSerach()
+    static let shared: YNSearch = YNSearch()
 
     override init() {
         pref = UserDefaults.standard
