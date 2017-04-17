@@ -8,18 +8,18 @@
 
 import UIKit
 
-class YNSearchTextField: UITextField {
+open class YNSearchTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.initView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    func initView() {
+    open func initView() {
         self.leftViewMode = .always
         
         let searchImageViewWrapper = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 15))
@@ -34,7 +34,7 @@ class YNSearchTextField: UITextField {
     }
 }
 
-class YNSearchTextFieldView: UIView {
+open class YNSearchTextFieldView: UIView {
     var ynSearchTextField: YNSearchTextField!
     var cancelButton: UIButton!
     
@@ -44,11 +44,11 @@ class YNSearchTextFieldView: UIView {
         self.initView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    func initView() {
+    open func initView() {
         self.ynSearchTextField = YNSearchTextField(frame: CGRect(x: 0, y: 0, width: self.frame.width - 50, height: self.frame.height))
         self.addSubview(self.ynSearchTextField)
         

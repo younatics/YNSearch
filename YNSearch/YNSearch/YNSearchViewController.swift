@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YNSearchViewController: UIViewController, UITextFieldDelegate {
+open class YNSearchViewController: UIViewController, UITextFieldDelegate {
     var delegate: YNSearchDelegate? {
         didSet {
             self.ynSearchView.delegate = delegate
@@ -23,17 +23,17 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
     
     var ynSerach = YNSearch()
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.ynSearchView.ynSearchMainView.redrawSearchHistoryButtons()
     }
     
-    func ynSearchinit() {
+    open func ynSearchinit() {
         self.ynSearchTextfieldView = YNSearchTextFieldView(frame: CGRect(x: 20, y: 20, width: width-40, height: 50))
         self.ynSearchTextfieldView.ynSearchTextField.delegate = self
         self.ynSearchTextfieldView.ynSearchTextField.addTarget(self, action: #selector(ynSearchTextfieldTextChanged(_:)), for: .editingChanged)
@@ -45,16 +45,16 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: - YNSearchTextfield
-    func ynSearchTextfieldcancelButtonClicked() {
+    open func ynSearchTextfieldcancelButtonClicked() {
         self.ynSearchTextfieldView.ynSearchTextField.text = ""
         self.ynSearchTextfieldView.ynSearchTextField.endEditing(true)
     }
-    func ynSearchTextfieldTextChanged(_ textField: UITextField) {
+    open func ynSearchTextfieldTextChanged(_ textField: UITextField) {
         self.ynSearchView.ynSearchListView.ynSearchTextFieldText = textField.text
     }
     
     // MARK: - UITextFieldDelegate
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    open func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let text = textField.text else { return true }
         if !text.isEmpty {
             self.ynSerach.appendSearchHistories(value: text)
@@ -64,7 +64,7 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    open func textFieldDidBeginEditing(_ textField: UITextField) {
         UIView.animate(withDuration: 0.3, animations: {
             self.ynSearchView.ynSearchMainView.alpha = 0
             self.ynSearchTextfieldView.cancelButton.alpha = 1
@@ -77,7 +77,7 @@ class YNSearchViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    open func textFieldDidEndEditing(_ textField: UITextField) {
         UIView.animate(withDuration: 0.3, animations: {
             self.ynSearchView.ynSearchMainView.alpha = 1
             self.ynSearchTextfieldView.cancelButton.alpha = 0

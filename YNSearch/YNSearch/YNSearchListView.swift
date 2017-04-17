@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource {
+open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource {
     var database: [String]?
     var ynSearchListViewDelegate: YNSearchListViewDelegate?
     var ynSearch = YNSearch()
@@ -30,18 +30,18 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
         
     }
     
-    func initData() {
+    open func initData() {
         guard let database = ynSearch.getDatabase() else { return }
         self.database = database
 
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     // MARK: - UITableViewDelegate, UITableViewDataSource
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let _database = database else { return UITableViewCell() }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: YNSearchListViewCell.ID) as! YNSearchListViewCell
@@ -49,12 +49,12 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let _database = database else { return 0 }
         return _database.count
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let _database = database else { return }
 
@@ -63,7 +63,7 @@ class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource 
     }
     
     
-    func initView() {
+    open func initView() {
         self.delegate = self
         self.dataSource = self
         self.register(YNSearchListViewCell.self, forCellReuseIdentifier: YNSearchListViewCell.ID)

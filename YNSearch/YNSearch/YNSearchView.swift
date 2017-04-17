@@ -8,9 +8,9 @@
 
 import UIKit
 
-class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDelegate {
+open class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDelegate {
 
-    var delegate: YNSearchDelegate?
+    open var delegate: YNSearchDelegate?
     
     var ynScrollView: UIScrollView!
     var ynSearchMainView: YNSearchMainView!
@@ -41,24 +41,24 @@ class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDelegate {
         
     }
     
-    func ynSearchMainViewSearchHistoryChanged() {
+    open func ynSearchMainViewSearchHistoryChanged() {
         ynScrollView.contentSize = CGSize(width: self.frame.width, height: self.ynSearchMainView.clearHistoryButton.frame.origin.y + self.ynSearchMainView.clearHistoryButton.frame.height + 20)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     // MARK: - ynSearchMainView
-    func ynCategoryButtonClicked(text: String) {
+    open func ynCategoryButtonClicked(text: String) {
         self.delegate?.ynCategoryButtonClicked(text: text)
     }
     
-    func ynSearchHistoryButtonClicked(text: String) {
+    open func ynSearchHistoryButtonClicked(text: String) {
         self.delegate?.ynSearchHistoryButtonClicked(text: text)
     }
     
-    func ynSearchListViewClicked(text: String) {
+    open func ynSearchListViewClicked(text: String) {
         self.delegate?.ynSearchListViewClicked(text: text)
     }
 

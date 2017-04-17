@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YNSearchListViewCell: UITableViewCell {
+open class YNSearchListViewCell: UITableViewCell {
     static let ID = "YNSearchListViewCell"
     
     var leftMargin = 15
@@ -22,11 +22,11 @@ class YNSearchListViewCell: UITableViewCell {
         self.initView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    func initView() {
+    open func initView() {
         self.searchImageView = UIImageView(frame: CGRect(x: 15, y: (self.frame.height - 15)/2, width: 15, height: 15))
         self.searchImageView.image = UIImage(named: "search")
         self.addSubview(searchImageView)

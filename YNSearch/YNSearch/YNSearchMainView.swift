@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YNSearchMainView: UIView {
+open class YNSearchMainView: UIView {
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
 
@@ -33,39 +33,39 @@ class YNSearchMainView: UIView {
         self.initView(categories: categories)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     
-    func setYNCategoryButtonType(type: YNCategoryButtonType) {
+    open func setYNCategoryButtonType(type: YNCategoryButtonType) {
         for ynCategoryButton in self.ynCategoryButtons {
             ynCategoryButton.type = type
         }
     }
     
-    func ynCategoryButtonClicked(_ sender: UIButton) {
+    open func ynCategoryButtonClicked(_ sender: UIButton) {
         guard let text = ynCategoryButtons[sender.tag].titleLabel?.text else { return }
         ynSearch.appendSearchHistories(value: text)
         self.delegate?.ynCategoryButtonClicked(text: text)
     }
     
-    func ynSearchHistoryButtonClicked(_ sender: UIButton) {
+    open func ynSearchHistoryButtonClicked(_ sender: UIButton) {
         guard let text = ynSearchHistoryButtons[sender.tag].textLabel.text else { return }
         self.delegate?.ynSearchHistoryButtonClicked(text: text)
     }
     
-    func clearHistoryButtonClicked() {
+    open func clearHistoryButtonClicked() {
         ynSearch.setSearchHistories(value: [String]())
         self.redrawSearchHistoryButtons()
     }
     
-    func closeButtonClicked(_ sender: UIButton) {
+    open func closeButtonClicked(_ sender: UIButton) {
         ynSearch.deleteSearchHistories(index: sender.tag)
         self.redrawSearchHistoryButtons()
     }
     
-    func initView(categories: [String]) {
+    open func initView(categories: [String]) {
         self.categoryLabel = UILabel(frame: CGRect(x: margin, y: 0, width: width - 40, height: 50))
         self.categoryLabel.text = "Categories"
         self.categoryLabel.font = UIFont.systemFont(ofSize: 13)
@@ -105,7 +105,7 @@ class YNSearchMainView: UIView {
         
     }
     
-    func redrawSearchHistoryButtons() {
+    open func redrawSearchHistoryButtons() {
         for ynSearchHistoryView in ynSearchHistoryViews {
             ynSearchHistoryView.removeFromSuperview()
         }

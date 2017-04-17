@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YNSearchHistoryView: UIView {
+open class YNSearchHistoryView: UIView {
     var ynSearchHistoryButton: YNSearchHistoryButton!
     var closeButton: UIButton!
     var bottomLine: UIView!
@@ -19,11 +19,11 @@ class YNSearchHistoryView: UIView {
         self.initView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    func initView() {
+    open func initView() {
         self.ynSearchHistoryButton = YNSearchHistoryButton(frame: CGRect(x: 0, y: 0, width: self.frame.width - 15, height: self.frame.height))
         self.addSubview(ynSearchHistoryButton)
         
@@ -38,7 +38,7 @@ class YNSearchHistoryView: UIView {
     }
 }
 
-class YNSearchHistoryButton: UIButton {
+open class YNSearchHistoryButton: UIButton {
     var textLabel: UILabel!
 
     override init(frame: CGRect) {
@@ -47,11 +47,11 @@ class YNSearchHistoryButton: UIButton {
         self.initView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
-    override var isHighlighted: Bool {
+    override open var isHighlighted: Bool {
         didSet {
             switch isHighlighted {
             case true:
@@ -62,7 +62,7 @@ class YNSearchHistoryButton: UIButton {
         }
     }
     
-    func initView() {
+    open func initView() {
         let searchHistoryImageview = UIImageView(frame: CGRect(x: 0, y: (self.frame.height - 15)/2, width: 15, height: 15))
         searchHistoryImageview.image = UIImage(named: "search_history")
         self.addSubview(searchHistoryImageview)
