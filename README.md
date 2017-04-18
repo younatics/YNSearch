@@ -7,6 +7,8 @@
 [![Platform](https://img.shields.io/cocoapods/p/YNSearch.svg?style=flat)](http://cocoapods.org/pods/YNSearch)
 [![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 
+#### ✨[Listed 2nd at trending open source and 6th at trending developer in Github Swift category [04/18/2017]](https://github.com/younatics/YNDropDownMenu/blob/master/Images/2nd.PNG)
+
 ## Updates
 See [CHANGELOG](https://github.com/younatics/YNDropDownMenu/blob/master/CHANGELOG.md) for details
 
