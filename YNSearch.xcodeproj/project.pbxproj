@@ -7,137 +7,184 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		190F8BB81EA340E5001AD496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BAF1EA340E5001AD496 /* AppDelegate.swift */; };
-		190F8BB91EA340E5001AD496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BB01EA340E5001AD496 /* Assets.xcassets */; };
-		190F8BBB1EA340E5001AD496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BB41EA340E5001AD496 /* Main.storyboard */; };
-		190F8BBC1EA340E5001AD496 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BB61EA340E5001AD496 /* Info.plist */; };
-		190F8BBD1EA340E5001AD496 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BB71EA340E5001AD496 /* ViewController.swift */; };
-		190F8BC91EA3416D001AD496 /* YNSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BC11EA3416D001AD496 /* YNSearch.swift */; };
-		190F8BCA1EA3416D001AD496 /* YNSearch.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BC21EA3416D001AD496 /* YNSearch.xcassets */; };
-		190F8BCB1EA3416D001AD496 /* YNSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BC31EA3416D001AD496 /* YNSearchDelegate.swift */; };
-		190F8BCC1EA3416D001AD496 /* YNSearchHistoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BC41EA3416D001AD496 /* YNSearchHistoryButton.swift */; };
-		190F8BCD1EA3416D001AD496 /* YNSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BC51EA3416D001AD496 /* YNSearchListView.swift */; };
-		190F8BCE1EA3416D001AD496 /* YNSearchListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BC61EA3416D001AD496 /* YNSearchListViewCell.swift */; };
-		190F8BCF1EA3416D001AD496 /* YNSearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BC71EA3416D001AD496 /* YNSearchMainView.swift */; };
-		190F8BD01EA3416D001AD496 /* YNSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BC81EA3416D001AD496 /* YNSearchViewController.swift */; };
-		190F8BD21EA341F2001AD496 /* YNCategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BD11EA341F2001AD496 /* YNCategoryButton.swift */; };
-		190F8BDB1EA34257001AD496 /* YNSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BD91EA34257001AD496 /* YNSearchTextField.swift */; };
-		190F8BDC1EA34257001AD496 /* YNSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190F8BDA1EA34257001AD496 /* YNSearchView.swift */; };
-		190F8BDF1EA3435C001AD496 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 190F8BDD1EA3435B001AD496 /* LaunchScreen.xib */; };
-		19588FBF1EA377A000157518 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19588FBE1EA377A000157518 /* DetailViewController.swift */; };
-		19588FC11EA38B9700157518 /* YNSearchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19588FC01EA38B9700157518 /* YNSearchExtension.swift */; };
-		19BE85A41EA4757800D59D4A /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 19BE85A21EA4757800D59D4A /* CHANGELOG.md */; };
-		19BE85A51EA4757800D59D4A /* YNSearch.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 19BE85A31EA4757800D59D4A /* YNSearch.podspec */; };
+		19D22E331EA7A8F6006DF0AC /* YNSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 19D22E311EA7A8F6006DF0AC /* YNSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19FE320B1EA7B67900A4DB5E /* YNCategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE31FF1EA7B67900A4DB5E /* YNCategoryButton.swift */; };
+		19FE320C1EA7B67900A4DB5E /* YNSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE32001EA7B67900A4DB5E /* YNSearch.swift */; };
+		19FE320D1EA7B67900A4DB5E /* YNSearch.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19FE32011EA7B67900A4DB5E /* YNSearch.xcassets */; };
+		19FE320E1EA7B67900A4DB5E /* YNSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE32021EA7B67900A4DB5E /* YNSearchDelegate.swift */; };
+		19FE320F1EA7B67900A4DB5E /* YNSearchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE32031EA7B67900A4DB5E /* YNSearchExtension.swift */; };
+		19FE32101EA7B67900A4DB5E /* YNSearchHistoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE32041EA7B67900A4DB5E /* YNSearchHistoryButton.swift */; };
+		19FE32111EA7B67900A4DB5E /* YNSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE32051EA7B67900A4DB5E /* YNSearchListView.swift */; };
+		19FE32121EA7B67900A4DB5E /* YNSearchListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE32061EA7B67900A4DB5E /* YNSearchListViewCell.swift */; };
+		19FE32131EA7B67900A4DB5E /* YNSearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE32071EA7B67900A4DB5E /* YNSearchMainView.swift */; };
+		19FE32141EA7B67900A4DB5E /* YNSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE32081EA7B67900A4DB5E /* YNSearchTextField.swift */; };
+		19FE32151EA7B67900A4DB5E /* YNSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE32091EA7B67900A4DB5E /* YNSearchView.swift */; };
+		19FE32161EA7B67900A4DB5E /* YNSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE320A1EA7B67900A4DB5E /* YNSearchViewController.swift */; };
+		19FE321E1EA7B77C00A4DB5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE321D1EA7B77C00A4DB5E /* AppDelegate.swift */; };
+		19FE32201EA7B77C00A4DB5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE321F1EA7B77C00A4DB5E /* ViewController.swift */; };
+		19FE32231EA7B77C00A4DB5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FE32211EA7B77C00A4DB5E /* Main.storyboard */; };
+		19FE32251EA7B77C00A4DB5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19FE32241EA7B77C00A4DB5E /* Assets.xcassets */; };
+		19FE323D1EA7B8D800A4DB5E /* YNSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19D22E2E1EA7A8F6006DF0AC /* YNSearch.framework */; };
+		19FE32461EA7B93100A4DB5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19FE32401EA7B93100A4DB5E /* LaunchScreen.xib */; };
+		19FE32471EA7B93100A4DB5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FE32421EA7B93100A4DB5E /* Main.storyboard */; };
+		19FE32481EA7B93100A4DB5E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE32441EA7B93100A4DB5E /* DetailViewController.swift */; };
+		19FE324A1EA7BABA00A4DB5E /* YNSearch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19D22E2E1EA7A8F6006DF0AC /* YNSearch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		19FE324B1EA7BABA00A4DB5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19D22E251EA7A8F6006DF0AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19D22E2D1EA7A8F6006DF0AC;
+			remoteInfo = YNSearch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		19FE324D1EA7BABA00A4DB5E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				19FE324A1EA7BABA00A4DB5E /* YNSearch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		190F8B9A1EA34033001AD496 /* YNSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YNSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		190F8BAF1EA340E5001AD496 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = YNSearch/YNSearchDemo/AppDelegate.swift; sourceTree = "<group>"; };
-		190F8BB01EA340E5001AD496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = YNSearch/YNSearchDemo/Assets.xcassets; sourceTree = "<group>"; };
-		190F8BB51EA340E5001AD496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		190F8BB61EA340E5001AD496 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = YNSearch/YNSearchDemo/Info.plist; sourceTree = "<group>"; };
-		190F8BB71EA340E5001AD496 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = YNSearch/YNSearchDemo/ViewController.swift; sourceTree = "<group>"; };
-		190F8BC11EA3416D001AD496 /* YNSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearch.swift; sourceTree = "<group>"; };
-		190F8BC21EA3416D001AD496 /* YNSearch.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YNSearch.xcassets; sourceTree = "<group>"; };
-		190F8BC31EA3416D001AD496 /* YNSearchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchDelegate.swift; sourceTree = "<group>"; };
-		190F8BC41EA3416D001AD496 /* YNSearchHistoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchHistoryButton.swift; sourceTree = "<group>"; };
-		190F8BC51EA3416D001AD496 /* YNSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchListView.swift; sourceTree = "<group>"; };
-		190F8BC61EA3416D001AD496 /* YNSearchListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchListViewCell.swift; sourceTree = "<group>"; };
-		190F8BC71EA3416D001AD496 /* YNSearchMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchMainView.swift; sourceTree = "<group>"; };
-		190F8BC81EA3416D001AD496 /* YNSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchViewController.swift; sourceTree = "<group>"; };
-		190F8BD11EA341F2001AD496 /* YNCategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNCategoryButton.swift; sourceTree = "<group>"; };
-		190F8BD91EA34257001AD496 /* YNSearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchTextField.swift; sourceTree = "<group>"; };
-		190F8BDA1EA34257001AD496 /* YNSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchView.swift; sourceTree = "<group>"; };
-		190F8BDE1EA3435C001AD496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		19588FBE1EA377A000157518 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = YNSearch/YNSearchDemo/DetailViewController.swift; sourceTree = "<group>"; };
-		19588FC01EA38B9700157518 /* YNSearchExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchExtension.swift; sourceTree = "<group>"; };
-		19BE85A21EA4757800D59D4A /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = SOURCE_ROOT; };
-		19BE85A31EA4757800D59D4A /* YNSearch.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YNSearch.podspec; sourceTree = SOURCE_ROOT; };
+		19D22E2E1EA7A8F6006DF0AC /* YNSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YNSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19D22E311EA7A8F6006DF0AC /* YNSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNSearch.h; sourceTree = "<group>"; };
+		19D22E321EA7A8F6006DF0AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19FE31FF1EA7B67900A4DB5E /* YNCategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNCategoryButton.swift; sourceTree = "<group>"; };
+		19FE32001EA7B67900A4DB5E /* YNSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearch.swift; sourceTree = "<group>"; };
+		19FE32011EA7B67900A4DB5E /* YNSearch.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YNSearch.xcassets; sourceTree = "<group>"; };
+		19FE32021EA7B67900A4DB5E /* YNSearchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchDelegate.swift; sourceTree = "<group>"; };
+		19FE32031EA7B67900A4DB5E /* YNSearchExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchExtension.swift; sourceTree = "<group>"; };
+		19FE32041EA7B67900A4DB5E /* YNSearchHistoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchHistoryButton.swift; sourceTree = "<group>"; };
+		19FE32051EA7B67900A4DB5E /* YNSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchListView.swift; sourceTree = "<group>"; };
+		19FE32061EA7B67900A4DB5E /* YNSearchListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchListViewCell.swift; sourceTree = "<group>"; };
+		19FE32071EA7B67900A4DB5E /* YNSearchMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchMainView.swift; sourceTree = "<group>"; };
+		19FE32081EA7B67900A4DB5E /* YNSearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchTextField.swift; sourceTree = "<group>"; };
+		19FE32091EA7B67900A4DB5E /* YNSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchView.swift; sourceTree = "<group>"; };
+		19FE320A1EA7B67900A4DB5E /* YNSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchViewController.swift; sourceTree = "<group>"; };
+		19FE321B1EA7B77C00A4DB5E /* YNSearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YNSearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19FE321D1EA7B77C00A4DB5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19FE321F1EA7B77C00A4DB5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		19FE32221EA7B77C00A4DB5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19FE32241EA7B77C00A4DB5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19FE32291EA7B77C00A4DB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19FE32411EA7B93100A4DB5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		19FE32431EA7B93100A4DB5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		19FE32441EA7B93100A4DB5E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		190F8B971EA34033001AD496 /* Frameworks */ = {
+		19D22E2A1EA7A8F6006DF0AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19FE32181EA7B77C00A4DB5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19FE323D1EA7B8D800A4DB5E /* YNSearch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		190F8B911EA34033001AD496 = {
+		19D22E241EA7A8F6006DF0AC = {
 			isa = PBXGroup;
 			children = (
-				190F8BC01EA3416D001AD496 /* YNSearch */,
-				190F8BBE1EA340FF001AD496 /* YNSearchDemo */,
-				190F8B9B1EA34033001AD496 /* Products */,
+				19D22E301EA7A8F6006DF0AC /* YNSearch */,
+				19FE321C1EA7B77C00A4DB5E /* YNSearchDemo */,
+				19D22E2F1EA7A8F6006DF0AC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		190F8B9B1EA34033001AD496 /* Products */ = {
+		19D22E2F1EA7A8F6006DF0AC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				190F8B9A1EA34033001AD496 /* YNSearch.app */,
+				19D22E2E1EA7A8F6006DF0AC /* YNSearch.framework */,
+				19FE321B1EA7B77C00A4DB5E /* YNSearchDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		190F8BB11EA340E5001AD496 /* Base.lproj */ = {
+		19D22E301EA7A8F6006DF0AC /* YNSearch */ = {
 			isa = PBXGroup;
 			children = (
-				190F8BDD1EA3435B001AD496 /* LaunchScreen.xib */,
-				190F8BB41EA340E5001AD496 /* Main.storyboard */,
+				19D22E311EA7A8F6006DF0AC /* YNSearch.h */,
+				19FE31FF1EA7B67900A4DB5E /* YNCategoryButton.swift */,
+				19FE32001EA7B67900A4DB5E /* YNSearch.swift */,
+				19FE32011EA7B67900A4DB5E /* YNSearch.xcassets */,
+				19FE32021EA7B67900A4DB5E /* YNSearchDelegate.swift */,
+				19FE32031EA7B67900A4DB5E /* YNSearchExtension.swift */,
+				19FE32041EA7B67900A4DB5E /* YNSearchHistoryButton.swift */,
+				19FE32051EA7B67900A4DB5E /* YNSearchListView.swift */,
+				19FE32061EA7B67900A4DB5E /* YNSearchListViewCell.swift */,
+				19FE32071EA7B67900A4DB5E /* YNSearchMainView.swift */,
+				19FE32081EA7B67900A4DB5E /* YNSearchTextField.swift */,
+				19FE32091EA7B67900A4DB5E /* YNSearchView.swift */,
+				19FE320A1EA7B67900A4DB5E /* YNSearchViewController.swift */,
+				19D22E321EA7A8F6006DF0AC /* Info.plist */,
 			);
-			name = Base.lproj;
-			path = YNSearch/YNSearchDemo/Base.lproj;
+			path = YNSearch;
 			sourceTree = "<group>";
 		};
-		190F8BBE1EA340FF001AD496 /* YNSearchDemo */ = {
+		19FE321C1EA7B77C00A4DB5E /* YNSearchDemo */ = {
 			isa = PBXGroup;
 			children = (
-				190F8BAF1EA340E5001AD496 /* AppDelegate.swift */,
-				190F8BB71EA340E5001AD496 /* ViewController.swift */,
-				19588FBE1EA377A000157518 /* DetailViewController.swift */,
-				190F8BB01EA340E5001AD496 /* Assets.xcassets */,
-				190F8BB11EA340E5001AD496 /* Base.lproj */,
-				190F8BB61EA340E5001AD496 /* Info.plist */,
+				19FE323F1EA7B93100A4DB5E /* Base.lproj */,
+				19FE32441EA7B93100A4DB5E /* DetailViewController.swift */,
+				19FE321D1EA7B77C00A4DB5E /* AppDelegate.swift */,
+				19FE321F1EA7B77C00A4DB5E /* ViewController.swift */,
+				19FE32211EA7B77C00A4DB5E /* Main.storyboard */,
+				19FE32241EA7B77C00A4DB5E /* Assets.xcassets */,
+				19FE32291EA7B77C00A4DB5E /* Info.plist */,
 			);
-			name = YNSearchDemo;
+			path = YNSearchDemo;
 			sourceTree = "<group>";
 		};
-		190F8BC01EA3416D001AD496 /* YNSearch */ = {
+		19FE323F1EA7B93100A4DB5E /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				19BE85A21EA4757800D59D4A /* CHANGELOG.md */,
-				19BE85A31EA4757800D59D4A /* YNSearch.podspec */,
-				190F8BC21EA3416D001AD496 /* YNSearch.xcassets */,
-				190F8BC81EA3416D001AD496 /* YNSearchViewController.swift */,
-				190F8BC11EA3416D001AD496 /* YNSearch.swift */,
-				190F8BC31EA3416D001AD496 /* YNSearchDelegate.swift */,
-				190F8BD91EA34257001AD496 /* YNSearchTextField.swift */,
-				190F8BDA1EA34257001AD496 /* YNSearchView.swift */,
-				190F8BC71EA3416D001AD496 /* YNSearchMainView.swift */,
-				190F8BD11EA341F2001AD496 /* YNCategoryButton.swift */,
-				190F8BC41EA3416D001AD496 /* YNSearchHistoryButton.swift */,
-				190F8BC51EA3416D001AD496 /* YNSearchListView.swift */,
-				190F8BC61EA3416D001AD496 /* YNSearchListViewCell.swift */,
-				19588FC01EA38B9700157518 /* YNSearchExtension.swift */,
+				19FE32401EA7B93100A4DB5E /* LaunchScreen.xib */,
+				19FE32421EA7B93100A4DB5E /* Main.storyboard */,
 			);
-			name = YNSearch;
-			path = YNSearch/YNSearch;
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		19D22E2B1EA7A8F6006DF0AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19D22E331EA7A8F6006DF0AC /* YNSearch.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		190F8B991EA34033001AD496 /* YNSearch */ = {
+		19D22E2D1EA7A8F6006DF0AC /* YNSearch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 190F8BAC1EA34033001AD496 /* Build configuration list for PBXNativeTarget "YNSearch" */;
+			buildConfigurationList = 19D22E361EA7A8F6006DF0AC /* Build configuration list for PBXNativeTarget "YNSearch" */;
 			buildPhases = (
-				190F8B961EA34033001AD496 /* Sources */,
-				190F8B971EA34033001AD496 /* Frameworks */,
-				190F8B981EA34033001AD496 /* Resources */,
+				19D22E291EA7A8F6006DF0AC /* Sources */,
+				19D22E2A1EA7A8F6006DF0AC /* Frameworks */,
+				19D22E2B1EA7A8F6006DF0AC /* Headers */,
+				19D22E2C1EA7A8F6006DF0AC /* Resources */,
 			);
 			buildRules = (
 			);
@@ -145,28 +192,52 @@
 			);
 			name = YNSearch;
 			productName = YNSearch;
-			productReference = 190F8B9A1EA34033001AD496 /* YNSearch.app */;
+			productReference = 19D22E2E1EA7A8F6006DF0AC /* YNSearch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		19FE321A1EA7B77C00A4DB5E /* YNSearchDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19FE322A1EA7B77C00A4DB5E /* Build configuration list for PBXNativeTarget "YNSearchDemo" */;
+			buildPhases = (
+				19FE32171EA7B77C00A4DB5E /* Sources */,
+				19FE32181EA7B77C00A4DB5E /* Frameworks */,
+				19FE32191EA7B77C00A4DB5E /* Resources */,
+				19FE324D1EA7BABA00A4DB5E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19FE324C1EA7BABA00A4DB5E /* PBXTargetDependency */,
+			);
+			name = YNSearchDemo;
+			productName = YNSearchDemo;
+			productReference = 19FE321B1EA7B77C00A4DB5E /* YNSearchDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		190F8B921EA34033001AD496 /* Project object */ = {
+		19D22E251EA7A8F6006DF0AC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = SeungyounYi;
 				TargetAttributes = {
-					190F8B991EA34033001AD496 = {
-						CreatedOnToolsVersion = 8.3.1;
+					19D22E2D1EA7A8F6006DF0AC = {
+						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4G7K3CN2JU;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
+					19FE321A1EA7B77C00A4DB5E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4G7K3CN2JU;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
-			buildConfigurationList = 190F8B951EA34033001AD496 /* Build configuration list for PBXProject "YNSearch" */;
+			buildConfigurationList = 19D22E281EA7A8F6006DF0AC /* Build configuration list for PBXProject "YNSearch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -174,78 +245,107 @@
 				en,
 				Base,
 			);
-			mainGroup = 190F8B911EA34033001AD496;
-			productRefGroup = 190F8B9B1EA34033001AD496 /* Products */;
+			mainGroup = 19D22E241EA7A8F6006DF0AC;
+			productRefGroup = 19D22E2F1EA7A8F6006DF0AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				190F8B991EA34033001AD496 /* YNSearch */,
+				19D22E2D1EA7A8F6006DF0AC /* YNSearch */,
+				19FE321A1EA7B77C00A4DB5E /* YNSearchDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		190F8B981EA34033001AD496 /* Resources */ = {
+		19D22E2C1EA7A8F6006DF0AC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				190F8BDF1EA3435C001AD496 /* LaunchScreen.xib in Resources */,
-				190F8BBC1EA340E5001AD496 /* Info.plist in Resources */,
-				190F8BBB1EA340E5001AD496 /* Main.storyboard in Resources */,
-				19BE85A51EA4757800D59D4A /* YNSearch.podspec in Resources */,
-				190F8BB91EA340E5001AD496 /* Assets.xcassets in Resources */,
-				190F8BCA1EA3416D001AD496 /* YNSearch.xcassets in Resources */,
+				19FE320D1EA7B67900A4DB5E /* YNSearch.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19FE32191EA7B77C00A4DB5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19FE32461EA7B93100A4DB5E /* LaunchScreen.xib in Resources */,
+				19FE32251EA7B77C00A4DB5E /* Assets.xcassets in Resources */,
+				19FE32471EA7B93100A4DB5E /* Main.storyboard in Resources */,
+				19FE32231EA7B77C00A4DB5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		190F8B961EA34033001AD496 /* Sources */ = {
+		19D22E291EA7A8F6006DF0AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19588FBF1EA377A000157518 /* DetailViewController.swift in Sources */,
-				19BE85A41EA4757800D59D4A /* CHANGELOG.md in Sources */,
-				190F8BC91EA3416D001AD496 /* YNSearch.swift in Sources */,
-				190F8BCB1EA3416D001AD496 /* YNSearchDelegate.swift in Sources */,
-				190F8BBD1EA340E5001AD496 /* ViewController.swift in Sources */,
-				190F8BCC1EA3416D001AD496 /* YNSearchHistoryButton.swift in Sources */,
-				190F8BB81EA340E5001AD496 /* AppDelegate.swift in Sources */,
-				190F8BDB1EA34257001AD496 /* YNSearchTextField.swift in Sources */,
-				190F8BCD1EA3416D001AD496 /* YNSearchListView.swift in Sources */,
-				190F8BD01EA3416D001AD496 /* YNSearchViewController.swift in Sources */,
-				190F8BCF1EA3416D001AD496 /* YNSearchMainView.swift in Sources */,
-				19588FC11EA38B9700157518 /* YNSearchExtension.swift in Sources */,
-				190F8BDC1EA34257001AD496 /* YNSearchView.swift in Sources */,
-				190F8BD21EA341F2001AD496 /* YNCategoryButton.swift in Sources */,
-				190F8BCE1EA3416D001AD496 /* YNSearchListViewCell.swift in Sources */,
+				19FE32161EA7B67900A4DB5E /* YNSearchViewController.swift in Sources */,
+				19FE320F1EA7B67900A4DB5E /* YNSearchExtension.swift in Sources */,
+				19FE32151EA7B67900A4DB5E /* YNSearchView.swift in Sources */,
+				19FE320E1EA7B67900A4DB5E /* YNSearchDelegate.swift in Sources */,
+				19FE320C1EA7B67900A4DB5E /* YNSearch.swift in Sources */,
+				19FE32101EA7B67900A4DB5E /* YNSearchHistoryButton.swift in Sources */,
+				19FE320B1EA7B67900A4DB5E /* YNCategoryButton.swift in Sources */,
+				19FE32111EA7B67900A4DB5E /* YNSearchListView.swift in Sources */,
+				19FE32131EA7B67900A4DB5E /* YNSearchMainView.swift in Sources */,
+				19FE32121EA7B67900A4DB5E /* YNSearchListViewCell.swift in Sources */,
+				19FE32141EA7B67900A4DB5E /* YNSearchTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19FE32171EA7B77C00A4DB5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19FE32481EA7B93100A4DB5E /* DetailViewController.swift in Sources */,
+				19FE32201EA7B77C00A4DB5E /* ViewController.swift in Sources */,
+				19FE321E1EA7B77C00A4DB5E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		19FE324C1EA7BABA00A4DB5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19D22E2D1EA7A8F6006DF0AC /* YNSearch */;
+			targetProxy = 19FE324B1EA7BABA00A4DB5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		190F8BB41EA340E5001AD496 /* Main.storyboard */ = {
+		19FE32211EA7B77C00A4DB5E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				190F8BB51EA340E5001AD496 /* Base */,
+				19FE32221EA7B77C00A4DB5E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		190F8BDD1EA3435B001AD496 /* LaunchScreen.xib */ = {
+		19FE32401EA7B93100A4DB5E /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				190F8BDE1EA3435C001AD496 /* Base */,
+				19FE32411EA7B93100A4DB5E /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		19FE32421EA7B93100A4DB5E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19FE32431EA7B93100A4DB5E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		190F8BAA1EA34033001AD496 /* Debug */ = {
+		19D22E341EA7A8F6006DF0AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -269,6 +369,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -286,17 +387,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		190F8BAB1EA34033001AD496 /* Release */ = {
+		19D22E351EA7A8F6006DF0AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -320,6 +423,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -331,39 +435,83 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		190F8BAD1EA34033001AD496 /* Debug */ = {
+		19D22E371EA7A8F6006DF0AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4G7K3CN2JU;
-				INFOPLIST_FILE = "$(SRCROOT)/YNSearch/YNSearchDemo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YNSearch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seungyounyi.YNSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		190F8BAE1EA34033001AD496 /* Release */ = {
+		19D22E381EA7A8F6006DF0AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4G7K3CN2JU;
-				INFOPLIST_FILE = "$(SRCROOT)/YNSearch/YNSearchDemo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YNSearch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seungyounyi.YNSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		19FE322B1EA7B77C00A4DB5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4G7K3CN2JU;
+				INFOPLIST_FILE = YNSearchDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.seungyounyi.YNSearchDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		19FE322C1EA7B77C00A4DB5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4G7K3CN2JU;
+				INFOPLIST_FILE = YNSearchDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.seungyounyi.YNSearchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -372,25 +520,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		190F8B951EA34033001AD496 /* Build configuration list for PBXProject "YNSearch" */ = {
+		19D22E281EA7A8F6006DF0AC /* Build configuration list for PBXProject "YNSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				190F8BAA1EA34033001AD496 /* Debug */,
-				190F8BAB1EA34033001AD496 /* Release */,
+				19D22E341EA7A8F6006DF0AC /* Debug */,
+				19D22E351EA7A8F6006DF0AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		190F8BAC1EA34033001AD496 /* Build configuration list for PBXNativeTarget "YNSearch" */ = {
+		19D22E361EA7A8F6006DF0AC /* Build configuration list for PBXNativeTarget "YNSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				190F8BAD1EA34033001AD496 /* Debug */,
-				190F8BAE1EA34033001AD496 /* Release */,
+				19D22E371EA7A8F6006DF0AC /* Debug */,
+				19D22E381EA7A8F6006DF0AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19FE322A1EA7B77C00A4DB5E /* Build configuration list for PBXNativeTarget "YNSearchDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19FE322B1EA7B77C00A4DB5E /* Debug */,
+				19FE322C1EA7B77C00A4DB5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 190F8B921EA34033001AD496 /* Project object */;
+	rootObject = 19D22E251EA7A8F6006DF0AC /* Project object */;
 }

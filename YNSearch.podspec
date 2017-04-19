@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YNSearch'
-  s.version          = '0.2.1'
+  s.version          = '0.3.0'
   s.summary          = 'Awesome fully customizable search view written in Swift 3'
 
   s.description      = <<-DESC
@@ -21,8 +21,8 @@ Pod::Spec.new do |s|
   s.author           = { "Seungyoun Yi" => "younatics@gmail.com" }
 
   s.source           = { :git => 'https://github.com/younatics/YNSearch.git', :tag => s.version.to_s }
-  s.source_files     = 'YNSearch/YNSearch/*.swift'
-  s.resources        = "YNSearch/YNSearch/*.xcassets"
+  s.source_files     = 'YNSearch/*.swift'
+  s.resources        = "YNSearch/*.xcassets"
 
   s.ios.deployment_target = '8.0'
 
