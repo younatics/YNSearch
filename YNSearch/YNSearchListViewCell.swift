@@ -28,7 +28,8 @@ open class YNSearchListViewCell: UITableViewCell {
     
     open func initView() {
         self.searchImageView = UIImageView(frame: CGRect(x: 15, y: (self.frame.height - 15)/2, width: 15, height: 15))
-        self.searchImageView.image = UIImage(named: "search")
+        let search = UIImage(named: "search", in: Bundle(for: YNSearch.self), compatibleWith: nil)
+        self.searchImageView.image = search
         self.addSubview(searchImageView)
         
         self.searchLabel = UILabel(frame: CGRect(x: 40, y: 0, width: self.frame.width - 20, height: self.frame.height))

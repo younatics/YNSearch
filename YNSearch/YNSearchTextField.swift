@@ -24,7 +24,8 @@ open class YNSearchTextField: UITextField {
         
         let searchImageViewWrapper = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 15))
         let searchImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 15, height: 15))
-        searchImageView.image = UIImage(named: "search")
+        let search = UIImage(named: "search", in: Bundle(for: YNSearch.self), compatibleWith: nil)
+        searchImageView.image = search
         searchImageViewWrapper.addSubview(searchImageView)
         
         self.leftView = searchImageViewWrapper

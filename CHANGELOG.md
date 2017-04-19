@@ -1,4 +1,7 @@
 # Updates
+## [v0.3.1](https://github.com/younatics/YNSearch/releases/tag/0.3.1)
+* Bug Fixed
+
 ## [v0.3.0](https://github.com/younatics/YNSearch/releases/tag/0.3.0)
 * Bug Fixed
 
