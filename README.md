@@ -14,7 +14,7 @@
 See [CHANGELOG](https://github.com/younatics/YNDropDownMenu/blob/master/CHANGELOG.md) for details
 
 ## Intoduction
-🔍 Awesome search view, written in Swift 3, appears search view like Pinterest Search view. You can fully customizable this library.
+🔍 Awesome search view, written in Swift 3, appears search view like Pinterest Search view. You can fully customize this library.
 
 ![demo](Images/YNSearch.gif)
 ![demo2](Images/YNSearch1.png)
@@ -23,7 +23,7 @@ See [CHANGELOG](https://github.com/younatics/YNDropDownMenu/blob/master/CHANGELO
 
 ## Requirements
 
-`YNSearch` written in Swift 3. Compatible with iOS 8.0+
+`YNSearch` is written in Swift 3. Compatible with iOS 8.0+
 
 ## Installation
 
@@ -41,7 +41,7 @@ github "younatics/YNSearch"
 ```
 
 ## Simple Usage
-Set database(Required), categories(Required) and search histories(Optional).
+Set database (required), categories (required) and search histories (optional).
 ```swift
 import YNSearch
 
@@ -97,7 +97,7 @@ Set `YNCategoryButton` type.
 self.ynSearchView.ynSearchMainView.setYNCategoryButtonType(type: .colorful)
 ```
 
-#### You can fully customizable this `YNSearch` based on view hierachy
+#### You can fully customize this `YNSearch` based on view hierachy
 
 ## References
 #### Please tell me or make pull request if you use this library in your application :) 
