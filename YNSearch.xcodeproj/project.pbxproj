@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		196636CE1EA90C2300EE1F43 /* YNSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196636CD1EA90C2300EE1F43 /* YNSearchModel.swift */; };
 		19D22E331EA7A8F6006DF0AC /* YNSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 19D22E311EA7A8F6006DF0AC /* YNSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19FE320B1EA7B67900A4DB5E /* YNCategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE31FF1EA7B67900A4DB5E /* YNCategoryButton.swift */; };
 		19FE320C1EA7B67900A4DB5E /* YNSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE32001EA7B67900A4DB5E /* YNSearch.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		196636CD1EA90C2300EE1F43 /* YNSearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchModel.swift; sourceTree = "<group>"; };
 		19D22E2E1EA7A8F6006DF0AC /* YNSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YNSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D22E311EA7A8F6006DF0AC /* YNSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNSearch.h; sourceTree = "<group>"; };
 		19D22E321EA7A8F6006DF0AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				19D22E311EA7A8F6006DF0AC /* YNSearch.h */,
 				19FE31FF1EA7B67900A4DB5E /* YNCategoryButton.swift */,
 				19FE32001EA7B67900A4DB5E /* YNSearch.swift */,
+				196636CD1EA90C2300EE1F43 /* YNSearchModel.swift */,
 				19FE32011EA7B67900A4DB5E /* YNSearch.xcassets */,
 				19FE32021EA7B67900A4DB5E /* YNSearchDelegate.swift */,
 				19FE32031EA7B67900A4DB5E /* YNSearchExtension.swift */,
@@ -287,6 +290,7 @@
 				19FE320F1EA7B67900A4DB5E /* YNSearchExtension.swift in Sources */,
 				19FE32151EA7B67900A4DB5E /* YNSearchView.swift in Sources */,
 				19FE320E1EA7B67900A4DB5E /* YNSearchDelegate.swift in Sources */,
+				196636CE1EA90C2300EE1F43 /* YNSearchModel.swift in Sources */,
 				19FE320C1EA7B67900A4DB5E /* YNSearch.swift in Sources */,
 				19FE32101EA7B67900A4DB5E /* YNSearchHistoryButton.swift in Sources */,
 				19FE320B1EA7B67900A4DB5E /* YNCategoryButton.swift in Sources */,

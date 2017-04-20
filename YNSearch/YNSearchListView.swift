@@ -9,7 +9,7 @@
 import UIKit
 
 open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource {
-    var database: [String]?
+    var database: [YNSearchModel]?
     open var ynSearchListViewDelegate: YNSearchListViewDelegate?
     open var ynSearch = YNSearch()
     open var ynSearchTextFieldText: String? {
