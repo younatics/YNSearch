@@ -28,9 +28,13 @@ open class YNSearch: NSObject {
     
     open func getSearchResultKey(value: String) -> [String]? {
         guard let searchResult = pref.object(forKey: "database") as? [YNSearchModel] else { return nil }
+        let keys = searchResult.flatMap(){ $0.0 as? String }
+
+        
         let predicate = NSPredicate(format: "SELF CONTAINS[c] %@", value)
         let searchDataSource = searchResult.filter { predicate.evaluate(with: $0) }
 
+        
         return searchDataSource
     }
 

@@ -45,7 +45,10 @@ open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSo
         guard let _database = database else { return UITableViewCell() }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: YNSearchListViewCell.ID) as! YNSearchListViewCell
-        cell.searchLabel.text = _database[indexPath.row]
+        
+        if let key = _database[indexPath.row].key {
+            cell.searchLabel.text = key
+        }
         return cell
     }
     
@@ -56,10 +59,12 @@ open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSo
     
     open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let _database = database else { return }
+        guard let databaseIndex = database?[indexPath.row] else { return }
 
-        self.ynSearchListViewDelegate?.ynSearchListViewClicked(text: _database[indexPath.row])
-        self.ynSearch.appendSearchHistories(value: _database[indexPath.row])
+        if let key = databaseIndex.key {
+            self.ynSearchListViewDelegate?.ynSearchListViewClicked(text: key)
+            self.ynSearch.appendSearchHistories(value: key)
+        }
     }
     
     
