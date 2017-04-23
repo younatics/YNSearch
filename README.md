@@ -11,7 +11,7 @@
 #### ✨[Listed 2nd at trending open source and 6th at trending developer in Github Swift category [04/18/2017]](https://github.com/younatics/YNDropDownMenu/blob/master/Images/2nd.PNG)
 
 ## Updates
-See [CHANGELOG](https://github.com/younatics/YNDropDownMenu/blob/master/CHANGELOG.md) for details
+See [CHANGELOG](https://github.com/younatics/YNSearch/blob/master/CHANGELOG.md) for details
 
 ## Intoduction
 🔍 Awesome search view, written in Swift 3, appears search view like Pinterest Search view. You can fully customize this library.
