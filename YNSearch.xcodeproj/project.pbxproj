@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		196636CE1EA90C2300EE1F43 /* YNSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196636CD1EA90C2300EE1F43 /* YNSearchModel.swift */; };
+		19B657DA1EAD92C000454580 /* Objectification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B657D91EAD92C000454580 /* Objectification.swift */; };
 		19D22E331EA7A8F6006DF0AC /* YNSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = 19D22E311EA7A8F6006DF0AC /* YNSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19FE320B1EA7B67900A4DB5E /* YNCategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE31FF1EA7B67900A4DB5E /* YNCategoryButton.swift */; };
 		19FE320C1EA7B67900A4DB5E /* YNSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE32001EA7B67900A4DB5E /* YNSearch.swift */; };
@@ -56,6 +58,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		196636CD1EA90C2300EE1F43 /* YNSearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchModel.swift; sourceTree = "<group>"; };
+		19B657D91EAD92C000454580 /* Objectification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objectification.swift; sourceTree = "<group>"; };
 		19D22E2E1EA7A8F6006DF0AC /* YNSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YNSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D22E311EA7A8F6006DF0AC /* YNSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNSearch.h; sourceTree = "<group>"; };
 		19D22E321EA7A8F6006DF0AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,9 +105,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19B657D81EAD92C000454580 /* Objectification */ = {
+			isa = PBXGroup;
+			children = (
+				19B657D91EAD92C000454580 /* Objectification.swift */,
+			);
+			path = Objectification;
+			sourceTree = "<group>";
+		};
 		19D22E241EA7A8F6006DF0AC = {
 			isa = PBXGroup;
 			children = (
+				19B657D81EAD92C000454580 /* Objectification */,
 				19D22E301EA7A8F6006DF0AC /* YNSearch */,
 				19FE321C1EA7B77C00A4DB5E /* YNSearchDemo */,
 				19D22E2F1EA7A8F6006DF0AC /* Products */,
@@ -123,8 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				19D22E311EA7A8F6006DF0AC /* YNSearch.h */,
-				19FE31FF1EA7B67900A4DB5E /* YNCategoryButton.swift */,
 				19FE32001EA7B67900A4DB5E /* YNSearch.swift */,
+				19FE31FF1EA7B67900A4DB5E /* YNCategoryButton.swift */,
+				196636CD1EA90C2300EE1F43 /* YNSearchModel.swift */,
 				19FE32011EA7B67900A4DB5E /* YNSearch.xcassets */,
 				19FE32021EA7B67900A4DB5E /* YNSearchDelegate.swift */,
 				19FE32031EA7B67900A4DB5E /* YNSearchExtension.swift */,
@@ -143,12 +157,12 @@
 		19FE321C1EA7B77C00A4DB5E /* YNSearchDemo */ = {
 			isa = PBXGroup;
 			children = (
-				19FE323F1EA7B93100A4DB5E /* Base.lproj */,
+				19FE321F1EA7B77C00A4DB5E /* ViewController.swift */,
 				19FE32441EA7B93100A4DB5E /* DetailViewController.swift */,
 				19FE321D1EA7B77C00A4DB5E /* AppDelegate.swift */,
-				19FE321F1EA7B77C00A4DB5E /* ViewController.swift */,
 				19FE32211EA7B77C00A4DB5E /* Main.storyboard */,
 				19FE32241EA7B77C00A4DB5E /* Assets.xcassets */,
+				19FE323F1EA7B93100A4DB5E /* Base.lproj */,
 				19FE32291EA7B77C00A4DB5E /* Info.plist */,
 			);
 			path = YNSearchDemo;
@@ -287,6 +301,8 @@
 				19FE320F1EA7B67900A4DB5E /* YNSearchExtension.swift in Sources */,
 				19FE32151EA7B67900A4DB5E /* YNSearchView.swift in Sources */,
 				19FE320E1EA7B67900A4DB5E /* YNSearchDelegate.swift in Sources */,
+				196636CE1EA90C2300EE1F43 /* YNSearchModel.swift in Sources */,
+				19B657DA1EAD92C000454580 /* Objectification.swift in Sources */,
 				19FE320C1EA7B67900A4DB5E /* YNSearch.swift in Sources */,
 				19FE32101EA7B67900A4DB5E /* YNSearchHistoryButton.swift in Sources */,
 				19FE320B1EA7B67900A4DB5E /* YNCategoryButton.swift in Sources */,

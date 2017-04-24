@@ -17,24 +17,6 @@ open class YNSearch: NSObject {
         pref = UserDefaults.standard
     }
     
-    open func setDatabase(value: [String]) {
-        pref.set(value, forKey: "database")
-    }
-    
-    open func getDatabase() -> [String]? {
-        guard let database = pref.object(forKey: "database") as? [String] else { return nil }
-        return database
-    }
-    
-    open func getSearchResult(value: String) -> [String]? {
-        guard let searchResult = pref.object(forKey: "database") as? [String] else { return nil }
-        let predicate = NSPredicate(format: "SELF CONTAINS[c] %@", value)
-        let searchDataSource = searchResult.filter { predicate.evaluate(with: $0) }
-
-        return searchDataSource
-    }
-
-    
     open func setCategories(value: [String]) {
         pref.set(value, forKey: "categories")
     }
@@ -43,7 +25,6 @@ open class YNSearch: NSObject {
         guard let categories = pref.object(forKey: "categories") as? [String] else { return nil }
         return categories
     }
-
 
     open func setSearchHistories(value: [String]) {
         pref.set(value, forKey: "histories")
