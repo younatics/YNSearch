@@ -41,18 +41,27 @@ github "younatics/YNSearch"
 ```
 
 ## Simple Usage
-Set database (required), categories (required) and search histories (optional).
+Set categories (required) and search histories (optional)
 ```swift
 import YNSearch
 
 let demoDatabase = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert", "UIView", "UITextfield", "UITableView", "Swift", "iOS", "Android"]
 
-ynSearch.setDatabase(value: demoDatabase)
 ynSearch.setCategories(value: demoDatabase)
 ynSearch.setSearchHistories(value: demoDatabase)
 
 self.ynSearchinit()
 ```
+
+Set database (required) 
+```swift
+let database1 = YNDropDownMenu(key: "YNDropDownMenu")
+let database2 = YNSearchData(key: "YNSearchData")
+let demoDatabase = [database1, database2]
+        
+self.ynSearchView.ynSearchListView.initData(database: demoDatabase)
+```
+#### I used [Objectification](https://github.com/younatics/Objectification) for accurate search result. This library will get all data in your object and search if for us.
 Done!
 
 ## View Hierachy
@@ -89,6 +98,10 @@ func ynCategoryButtonClicked(text: String) {
     
 func ynSearchListViewClicked(text: String) {
   print(text)
+}
+
+func ynSearchListViewClicked(object: YNSearchModel) {
+  print(object)
 }
 ```
 
