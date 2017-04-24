@@ -71,7 +71,6 @@ public class Objectification {
     
     private func checkArray(object: Any) -> [String] {
         var values = [String]()
-        
         if let valueArray = object as? Array<Any> {
             for arrayValue in valueArray {
                 values = values + checkArray(object: arrayValue)
@@ -82,6 +81,7 @@ public class Objectification {
                 values.append(convertOptional(string: objectString))
             }
         }
+
         return values
     }
     

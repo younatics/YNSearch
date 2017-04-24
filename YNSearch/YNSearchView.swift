@@ -9,7 +9,6 @@
 import UIKit
 
 open class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDelegate {
-
     open var delegate: YNSearchDelegate?
     
     open var ynScrollView: UIScrollView!
@@ -58,9 +57,16 @@ open class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDeleg
         self.delegate?.ynSearchHistoryButtonClicked(text: text)
     }
     
-    open func ynSearchListViewClicked(text: String) {
-        self.delegate?.ynSearchListViewClicked(text: text)
+    open func ynSearchListViewClicked(key: String) {
+        self.delegate?.ynSearchListViewClicked(key: key)
     }
+    
+    open func ynSearchListViewClicked(object: YNSearchModel) {
+        self.delegate?.ynSearchListViewClicked(object: object)
+    }
+    
+    
+
 
 
 }

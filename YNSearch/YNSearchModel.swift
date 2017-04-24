@@ -9,12 +9,8 @@
 import Foundation
 
 open class YNSearchModel {
-    public init(value: Any, key: String) {
-        self.value = value
+    public init(key: String) {
         self.key = key
     }
-    
-    var value: Any?
-    var key: String?
-    
+    open var key: String?
 }

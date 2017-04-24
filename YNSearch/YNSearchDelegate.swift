@@ -20,12 +20,18 @@ public protocol YNSearchMainViewDelegate {
 }
 
 public protocol YNSearchListViewDelegate {    
-    func ynSearchListViewClicked(text: String)
+    func ynSearchListViewClicked(key: String)
+    
+    func ynSearchListViewClicked(object: YNSearchModel)
     
 }
 
 public extension YNSearchMainViewDelegate {
     func ynSearchMainViewSearchHistoryChanged() { }
+}
+
+public extension YNSearchListViewDelegate {
+    func ynSearchListViewClicked(object: YNSearchModel) { }
 }
 
 
