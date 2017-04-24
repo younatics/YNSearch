@@ -9,8 +9,8 @@
 import UIKit
 
 open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource {
-    private var database = [YNSearchModel]()
-    private var searchResultDatabase = [YNSearchModel]()
+    private var database = [Any]()
+    private var searchResultDatabase = [Any]()
     
     open var ynSearchListViewDelegate: YNSearchListViewDelegate?
     open var ynSearch = YNSearch()
@@ -34,7 +34,7 @@ open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSo
         self.initView()
     }
     
-    open func initData(database: [YNSearchModel]) {
+    open func initData(database: [Any]) {
         self.database = database
         self.searchResultDatabase = database
         self.reloadData()
@@ -48,7 +48,9 @@ open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSo
     // MARK: - UITableViewDelegate, UITableViewDataSource
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: YNSearchListViewCell.ID) as! YNSearchListViewCell
-        cell.searchLabel.text = searchResultDatabase[indexPath.row].key
+        if let ynmodel = searchResultDatabase[indexPath.row] as? YNSearchModel {
+            cell.searchLabel.text = ynmodel.key
+        }
         
         return cell
     }
@@ -59,8 +61,7 @@ open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSo
     
     open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        if let key = searchResultDatabase[indexPath.row].key {
+        if let ynmodel = searchResultDatabase[indexPath.row] as? YNSearchModel, let key = ynmodel.key {
             self.ynSearchListViewDelegate?.ynSearchListViewClicked(key: key)
             self.ynSearchListViewDelegate?.ynSearchListViewClicked(object: database[indexPath.row])
             self.ynSearch.appendSearchHistories(value: key)

@@ -31,7 +31,7 @@ public extension YNSearchMainViewDelegate {
 }
 
 public extension YNSearchListViewDelegate {
-    func ynSearchListViewClicked(object: YNSearchModel) { }
+    func ynSearchListViewClicked(object: Any) { }
 }
 
 
