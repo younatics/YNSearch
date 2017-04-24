@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YNSearch'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'Awesome fully customizable search view written in Swift 3'
 
   s.description      = <<-DESC

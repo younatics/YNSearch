@@ -1,4 +1,7 @@
 # Updates
+## [v1.1.0](https://github.com/younatics/YNSearch/releases/tag/1.1.0)
+* Changed databse to [Any]
+
 ## [v1.0.0](https://github.com/younatics/YNSearch/releases/tag/1.0.0)
 * Search function is fully developed
 
