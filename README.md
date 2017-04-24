@@ -131,7 +131,7 @@ Set `YNCategoryButton` type.
 self.ynSearchView.ynSearchMainView.setYNCategoryButtonType(type: .colorful)
 ```
 
-See more usage in exapmle file
+See more usage in demo
 
 #### You can fully customize this `YNSearch` based on view hierachy
 
