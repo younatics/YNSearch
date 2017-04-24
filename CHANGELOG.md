@@ -1,4 +1,7 @@
 # Updates
+## [v1.0.0](https://github.com/younatics/YNSearch/releases/tag/1.0.0)
+* Search function is fully developed
+
 ## [v0.3.1](https://github.com/younatics/YNSearch/releases/tag/0.3.1)
 * Bug Fixed
 
