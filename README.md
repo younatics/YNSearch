@@ -53,7 +53,7 @@ ynSearch.setSearchHistories(value: demoDatabase)
 self.ynSearchinit()
 ```
 
-Set database (required) 
+Set database (required) and key (required). key will be displayed in `YNSearchListView`
 ```swift
 let database1 = YNDropDownMenu(key: "YNDropDownMenu")
 let database2 = YNSearchData(key: "YNSearchData")
@@ -61,6 +61,7 @@ let demoDatabase = [database1, database2]
         
 self.ynSearchView.ynSearchListView.initData(database: demoDatabase)
 ```
+
 #### I used [Objectification](https://github.com/younatics/Objectification) for accurate search result. This library will get all data in your object and search if for us.
 Done!
 
