@@ -19,7 +19,7 @@ open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSo
             guard let text = ynSearchTextFieldText else { return }
 
             let objectification = Objectification(objects: database, type: .all)
-            guard let result = objectification.objects(contain: text) as? [YNSearchModel] else { return }
+            let result = objectification.objects(contain: text)
 
             self.searchResultDatabase = result
             if text.isEmpty {
