@@ -1,4 +1,7 @@
 # Updates
+## [v2.1.0](https://github.com/younatics/YNSearch/releases/tag/2.1.0)
+* Support Realm 
+
 ## [v2.0.0](https://github.com/younatics/YNSearch/releases/tag/2.0.0)
 * YNSearchListView enabled to customize
 
