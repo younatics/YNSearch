@@ -53,7 +53,7 @@ ynSearch.setSearchHistories(value: demoDatabase)
 self.ynSearchinit()
 ```
 
-Set database (required) and key (required). key will be displayed in `YNSearchListView`
+Set database (required) and key (required). key will be displayed in `YNSearchListView` You can set your database `[Any]` if you want to customize. 
 ```swift
 let database1 = YNDropDownMenu(key: "YNDropDownMenu")
 let database2 = YNSearchData(key: "YNSearchData")
