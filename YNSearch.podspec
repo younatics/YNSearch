@@ -27,6 +27,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit'
+  s.frameworks = 'UIKit', 'Foundation'
   s.requires_arc = true
 end
