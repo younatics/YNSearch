@@ -59,7 +59,7 @@
 
 /* Begin PBXFileReference section */
 		196636CD1EA90C2300EE1F43 /* YNSearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchModel.swift; sourceTree = "<group>"; };
-		19B657D91EAD92C000454580 /* Objectification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objectification.swift; sourceTree = "<group>"; };
+		19B657D91EAD92C000454580 /* Objectification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Objectification.swift; path = ../Objectification/Objectification.swift; sourceTree = "<group>"; };
 		19D22E2E1EA7A8F6006DF0AC /* YNSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YNSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D22E311EA7A8F6006DF0AC /* YNSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YNSearch.h; sourceTree = "<group>"; };
 		19D22E321EA7A8F6006DF0AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,18 +105,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19B657D81EAD92C000454580 /* Objectification */ = {
-			isa = PBXGroup;
-			children = (
-				19B657D91EAD92C000454580 /* Objectification.swift */,
-			);
-			path = Objectification;
-			sourceTree = "<group>";
-		};
 		19D22E241EA7A8F6006DF0AC = {
 			isa = PBXGroup;
 			children = (
-				19B657D81EAD92C000454580 /* Objectification */,
 				19D22E301EA7A8F6006DF0AC /* YNSearch */,
 				19FE321C1EA7B77C00A4DB5E /* YNSearchDemo */,
 				19D22E2F1EA7A8F6006DF0AC /* Products */,
@@ -149,6 +140,7 @@
 				19FE32081EA7B67900A4DB5E /* YNSearchTextField.swift */,
 				19FE32091EA7B67900A4DB5E /* YNSearchView.swift */,
 				19FE320A1EA7B67900A4DB5E /* YNSearchViewController.swift */,
+				19B657D91EAD92C000454580 /* Objectification.swift */,
 				19D22E321EA7A8F6006DF0AC /* Info.plist */,
 			);
 			path = YNSearch;
