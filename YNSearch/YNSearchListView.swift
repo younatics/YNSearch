@@ -9,8 +9,8 @@
 import UIKit
 
 open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource {
-    private var database = [Any]()
-    private var searchResultDatabase = [Any]()
+    open var database = [Any]()
+    open var searchResultDatabase = [Any]()
     
     open var ynSearchListViewDelegate: YNSearchListViewDelegate?
     open var ynSearch = YNSearch()

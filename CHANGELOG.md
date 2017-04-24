@@ -1,4 +1,7 @@
 # Updates
+## [v1.1.2](https://github.com/younatics/YNSearch/releases/tag/1.1.2)
+* Ready for custom tableview
+
 ## [v1.1.1](https://github.com/younatics/YNSearch/releases/tag/1.1.1)
 * Bug Fixed
 
