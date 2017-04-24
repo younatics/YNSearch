@@ -106,10 +106,32 @@ func ynSearchListViewClicked(object: YNSearchModel) {
 }
 ```
 
+Set YNSearchListView delegate 
+```Swift
+func ynSearchListView(_ ynSearchListView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.ynSearchView.ynSearchListView.dequeueReusableCell(withIdentifier: YNSearchListViewCell.ID) as! YNSearchListViewCell
+        if let ynmodel = self.ynSearchView.ynSearchListView.searchResultDatabase[indexPath.row] as? YNSearchModel {
+            cell.searchLabel.text = ynmodel.key
+        }
+        
+        return cell
+}
+    
+func ynSearchListView(_ ynSearchListView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let ynmodel = self.ynSearchView.ynSearchListView.searchResultDatabase[indexPath.row] as? YNSearchModel, let key = ynmodel.key {
+            self.ynSearchView.ynSearchListView.ynSearchListViewDelegate?.ynSearchListViewClicked(key: key)
+            self.ynSearchView.ynSearchListView.ynSearchListViewDelegate?.ynSearchListViewClicked(object: self.ynSearchView.ynSearchListView.database[indexPath.row])
+            self.ynSearchView.ynSearchListView.ynSearch.appendSearchHistories(value: key)
+        }
+}
+```
+
 Set `YNCategoryButton` type.
 ```Swift
 self.ynSearchView.ynSearchMainView.setYNCategoryButtonType(type: .colorful)
 ```
+
+See more usage in exapmle file
 
 #### You can fully customize this `YNSearch` based on view hierachy
 
