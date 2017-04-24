@@ -44,6 +44,15 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(self.ynSearchView)
     }
     
+    open func setYNCategoryButtonType(type: YNCategoryButtonType) {
+        self.ynSearchView.ynSearchMainView.setYNCategoryButtonType(type: .colorful)
+    }
+    
+    open func initData(database: [YNSearchModel]) {
+        self.ynSearchView.ynSearchListView.initData(database: database)
+    }
+
+    
     // MARK: - YNSearchTextfield
     open func ynSearchTextfieldcancelButtonClicked() {
         self.ynSearchTextfieldView.ynSearchTextField.text = ""

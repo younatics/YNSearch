@@ -53,9 +53,9 @@ class ViewController: YNSearchViewController, YNSearchDelegate {
         let database3 = YNExpandableCell(key: "YNExpandableCell")
         let demoDatabase = [database1, database2, database3]
         
-        self.ynSearchView.ynSearchListView.initData(database: demoDatabase)
-        self.ynSearchView.ynSearchMainView.setYNCategoryButtonType(type: .colorful)
-
+        self.initData(database: demoDatabase)
+        self.setYNCategoryButtonType(type: .colorful)
+        
     }
 
     override func didReceiveMemoryWarning() {
