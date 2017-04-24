@@ -24,6 +24,10 @@ public protocol YNSearchListViewDelegate {
     
     func ynSearchListViewClicked(object: Any)
     
+    func ynSearchListView(_ ynSearchListView: UITableView, didSelectRowAt indexPath: IndexPath)
+    
+    func ynSearchListView(_ ynSearchListView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    
 }
 
 public extension YNSearchMainViewDelegate {

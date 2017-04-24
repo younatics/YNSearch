@@ -9,6 +9,7 @@
 import UIKit
 
 open class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDelegate {
+
     open var delegate: YNSearchDelegate?
     
     open var ynScrollView: UIScrollView!
@@ -65,7 +66,16 @@ open class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDeleg
         self.delegate?.ynSearchListViewClicked(object: object)
     }
     
+    open func ynSearchListView(_ ynSearchListView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = self.delegate?.ynSearchListView(ynSearchListView, cellForRowAt: indexPath) else { return UITableViewCell() }
+        return cell
+    }
+
+    open func ynSearchListView(_ ynSearchListView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.delegate?.ynSearchListView(ynSearchListView, didSelectRowAt: indexPath)
+    }
     
+
 
 
 

@@ -1,4 +1,7 @@
 # Updates
+## [v2.0.0](https://github.com/younatics/YNSearch/releases/tag/2.0.0)
+* YNSearchListView enabled to customize
+
 ## [v1.1.3](https://github.com/younatics/YNSearch/releases/tag/1.1.3)
 * Bug Fixed
 
