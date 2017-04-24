@@ -59,7 +59,7 @@ let database1 = YNDropDownMenu(key: "YNDropDownMenu")
 let database2 = YNSearchData(key: "YNSearchData")
 let demoDatabase = [database1, database2]
         
-self.ynSearchView.ynSearchListView.initData(database: demoDatabase)
+self.initData(database: demoDatabase)
 ```
 
 Set `YNSearchListView` Delegate
