@@ -9,30 +9,35 @@
 import UIKit
 
 open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource {
-    var database: [YNSearchModel]?
+    private var database = [YNSearchModel]()
+    private var searchResultDatabase = [YNSearchModel]()
+    
     open var ynSearchListViewDelegate: YNSearchListViewDelegate?
     open var ynSearch = YNSearch()
     open var ynSearchTextFieldText: String? {
         didSet {
             guard let text = ynSearchTextFieldText else { return }
-            self.database = ynSearch.getSearchResult(value: text)
+
+            let objectification = Objectification(objects: database, type: .all)
+            guard let result = objectification.objects(contain: text) as? [YNSearchModel] else { return }
+
+            self.searchResultDatabase = result
             if text.isEmpty {
-                self.initData()
+                self.initData(database: database)
             }
             self.reloadData()
+            print(result)
         }
     }
 
     public override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
         self.initView()
-        self.initData()
-        
     }
     
-    open func initData() {
-        guard let database = ynSearch.getDatabase() else { return }
+    open func initData(database: [YNSearchModel]) {
         self.database = database
+        self.reloadData()
 
     }
     
@@ -42,26 +47,22 @@ open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSo
     
     // MARK: - UITableViewDelegate, UITableViewDataSource
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let _database = database else { return UITableViewCell() }
-
         let cell = tableView.dequeueReusableCell(withIdentifier: YNSearchListViewCell.ID) as! YNSearchListViewCell
         
-        if let key = _database[indexPath.row].key {
+        if let key = database[indexPath.row].key {
             cell.searchLabel.text = key
         }
         return cell
     }
     
     open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let _database = database else { return 0 }
-        return _database.count
+        return database.count
     }
     
     open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let databaseIndex = database?[indexPath.row] else { return }
 
-        if let key = databaseIndex.key {
+        if let key = database[indexPath.row].key {
             self.ynSearchListViewDelegate?.ynSearchListViewClicked(text: key)
             self.ynSearch.appendSearchHistories(value: key)
         }

@@ -8,7 +8,12 @@
 
 import Foundation
 
-open class YNSearchModel: NSObject {
+open class YNSearchModel {
+    public init(value: Any, key: String) {
+        self.value = value
+        self.key = key
+    }
+    
     var value: Any?
     var key: String?
     
