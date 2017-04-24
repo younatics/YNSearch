@@ -14,7 +14,7 @@
 See [CHANGELOG](https://github.com/younatics/YNSearch/blob/master/CHANGELOG.md) for details
 
 ## Intoduction
-🔍 Awesome search view, written in Swift 3, appears search view like Pinterest Search view. You can fully customize this library.
+🔍 Awesome search view, written in Swift 3, appears search view like Pinterest Search view. You can fully customize this library. You can also use this library with Realm! See usage in below
 
 ![demo](Images/YNSearch.gif)
 ![demo2](Images/YNSearch1.png)
@@ -62,6 +62,53 @@ let demoDatabase = [database1, database2]
 self.ynSearchView.ynSearchListView.initData(database: demoDatabase)
 ```
 
+Set `YNSearchListView` Delegate
+```Swift
+func ynSearchListView(_ ynSearchListView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.ynSearchView.ynSearchListView.dequeueReusableCell(withIdentifier: YNSearchListViewCell.ID) as! YNSearchListViewCell
+        if let ynmodel = self.ynSearchView.ynSearchListView.searchResultDatabase[indexPath.row] as? YNSearchModel {
+            cell.searchLabel.text = ynmodel.key
+        }
+        
+        return cell
+}
+    
+func ynSearchListView(_ ynSearchListView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let ynmodel = self.ynSearchView.ynSearchListView.searchResultDatabase[indexPath.row] as? YNSearchModel, let key = ynmodel.key {
+        // Call listview clicked based on key
+        self.ynSearchView.ynSearchListView.ynSearchListViewDelegate?.ynSearchListViewClicked(key: key)
+        
+        // return object you set in database
+        self.ynSearchView.ynSearchListView.ynSearchListViewDelegate?.ynSearchListViewClicked(object: self.ynSearchView.ynSearchListView.database[indexPath.row])
+        
+        // Append Search history
+        self.ynSearchView.ynSearchListView.ynSearch.appendSearchHistories(value: key)
+        }
+}
+```
+
+## Realm Usage
+Get your Data with Realm
+```Swift 
+let datas = realm.objects(RealmModel.self)
+```
+Realm is not collection type so you need to convert it again with `[Any]`type. This will find all string in your RealmModel and show you results.
+```Swift 
+var dataArray = [Any]()
+for data in datas {
+        let searchModel = RealmModel()
+            searchModel.author = data.author
+            searchModel.detail = data.detail
+            searchModel.title = data.title
+            searchModel.type = data.type
+            
+            dataArray.append(searchModel)
+        }
+        
+self.initData(database: dataArray)
+```
+
+
 #### I used [Objectification](https://github.com/younatics/Objectification) for accurate search result. This library will get all data in your object and search if for us.
 Done!
 
@@ -103,26 +150,6 @@ func ynSearchListViewClicked(text: String) {
 
 func ynSearchListViewClicked(object: YNSearchModel) {
   print(object)
-}
-```
-
-Set YNSearchListView delegate 
-```Swift
-func ynSearchListView(_ ynSearchListView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.ynSearchView.ynSearchListView.dequeueReusableCell(withIdentifier: YNSearchListViewCell.ID) as! YNSearchListViewCell
-        if let ynmodel = self.ynSearchView.ynSearchListView.searchResultDatabase[indexPath.row] as? YNSearchModel {
-            cell.searchLabel.text = ynmodel.key
-        }
-        
-        return cell
-}
-    
-func ynSearchListView(_ ynSearchListView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let ynmodel = self.ynSearchView.ynSearchListView.searchResultDatabase[indexPath.row] as? YNSearchModel, let key = ynmodel.key {
-            self.ynSearchView.ynSearchListView.ynSearchListViewDelegate?.ynSearchListViewClicked(key: key)
-            self.ynSearchView.ynSearchListView.ynSearchListViewDelegate?.ynSearchListViewClicked(object: self.ynSearchView.ynSearchListView.database[indexPath.row])
-            self.ynSearchView.ynSearchListView.ynSearch.appendSearchHistories(value: key)
-        }
 }
 ```
 
