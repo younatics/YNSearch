@@ -22,7 +22,7 @@ public protocol YNSearchMainViewDelegate {
 public protocol YNSearchListViewDelegate {    
     func ynSearchListViewClicked(key: String)
     
-    func ynSearchListViewClicked(object: YNSearchModel)
+    func ynSearchListViewClicked(object: Any)
     
 }
 
