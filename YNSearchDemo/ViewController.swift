@@ -62,6 +62,11 @@ class ViewController: YNSearchViewController, YNSearchDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func ynSearchListViewDidScroll() {
+        self.ynSearchTextfieldView.ynSearchTextField.endEditing(true)
+    }
+    
 
     func ynSearchHistoryButtonClicked(text: String) {
         self.pushViewController(text: text)
@@ -78,7 +83,7 @@ class ViewController: YNSearchViewController, YNSearchDelegate {
         print(key)
     }
     
-    func ynSearchListViewClicked(object: YNSearchModel) {
+    func ynSearchListViewClicked(object: Any) {
         print(object)
     }
     

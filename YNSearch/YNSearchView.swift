@@ -9,7 +9,6 @@
 import UIKit
 
 open class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDelegate {
-
     open var delegate: YNSearchDelegate?
     
     open var ynScrollView: UIScrollView!
@@ -49,6 +48,10 @@ open class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDeleg
         super.init(coder: aDecoder)
     }
     
+    open func scrollViewDidScroll() {
+        self.delegate?.ynSearchListViewDidScroll()
+    }
+    
     // MARK: - ynSearchMainView
     open func ynCategoryButtonClicked(text: String) {
         self.delegate?.ynCategoryButtonClicked(text: text)
@@ -62,7 +65,7 @@ open class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDeleg
         self.delegate?.ynSearchListViewClicked(key: key)
     }
     
-    open func ynSearchListViewClicked(object: YNSearchModel) {
+    open func ynSearchListViewClicked(object: Any) {
         self.delegate?.ynSearchListViewClicked(object: object)
     }
     
@@ -73,6 +76,10 @@ open class YNSearchView: UIView, YNSearchMainViewDelegate, YNSearchListViewDeleg
 
     open func ynSearchListView(_ ynSearchListView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.ynSearchListView(ynSearchListView, didSelectRowAt: indexPath)
+    }
+    
+    open func ynSearchListViewDidScroll() {
+        self.delegate?.ynSearchListViewDidScroll()
     }
     
 

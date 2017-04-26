@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource {
+open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     open var database = [Any]()
     open var searchResultDatabase = [Any]()
     
@@ -58,6 +58,10 @@ open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSo
     open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         self.ynSearchListViewDelegate?.ynSearchListView(tableView, didSelectRowAt: indexPath)
+    }
+    
+    open func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.ynSearchListViewDelegate?.ynSearchListViewDidScroll()
     }
     
     

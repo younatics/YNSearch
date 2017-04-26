@@ -57,6 +57,17 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
     open func ynSearchTextfieldcancelButtonClicked() {
         self.ynSearchTextfieldView.ynSearchTextField.text = ""
         self.ynSearchTextfieldView.ynSearchTextField.endEditing(true)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.ynSearchView.ynSearchMainView.alpha = 1
+            self.ynSearchTextfieldView.cancelButton.alpha = 0
+            self.ynSearchView.ynSearchListView.alpha = 0
+        }) { (true) in
+            self.ynSearchView.ynSearchMainView.isHidden = false
+            self.ynSearchView.ynSearchListView.isHidden = true
+            self.ynSearchTextfieldView.cancelButton.isHidden = true
+            
+        }
     }
     open func ynSearchTextfieldTextChanged(_ textField: UITextField) {
         self.ynSearchView.ynSearchListView.ynSearchTextFieldText = textField.text
@@ -85,19 +96,4 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
 
         }
     }
-    
-    open func textFieldDidEndEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.ynSearchView.ynSearchMainView.alpha = 1
-            self.ynSearchTextfieldView.cancelButton.alpha = 0
-            self.ynSearchView.ynSearchListView.alpha = 0
-        }) { (true) in
-            self.ynSearchView.ynSearchMainView.isHidden = false
-            self.ynSearchView.ynSearchListView.isHidden = true
-            self.ynSearchTextfieldView.cancelButton.isHidden = true
-
-        }
-    }
-
-    
 }

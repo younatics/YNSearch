@@ -1,4 +1,7 @@
 # Updates
+## [v2.2.0](https://github.com/younatics/YNSearch/releases/tag/2.1.0)
+* More UI friendly
+
 ## [v2.1.0](https://github.com/younatics/YNSearch/releases/tag/2.1.0)
 * Support Realm 
 

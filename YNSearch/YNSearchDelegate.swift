@@ -28,6 +28,9 @@ public protocol YNSearchListViewDelegate {
     
     func ynSearchListView(_ ynSearchListView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     
+    func ynSearchListViewDidScroll()
+
+    
 }
 
 public extension YNSearchMainViewDelegate {
@@ -36,6 +39,9 @@ public extension YNSearchMainViewDelegate {
 
 public extension YNSearchListViewDelegate {
     func ynSearchListViewClicked(object: Any) { }
+    
+    func ynSearchListViewDidScroll() { }
+
 }
 
 
