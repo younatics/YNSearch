@@ -27,12 +27,7 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
     }
-    
-    override open func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.ynSearchView.ynSearchMainView.redrawSearchHistoryButtons()
-    }
-    
+
     open func ynSearchinit() {
         self.ynSearchTextfieldView = YNSearchTextFieldView(frame: CGRect(x: 20, y: 20, width: width-40, height: 50))
         self.ynSearchTextfieldView.ynSearchTextField.delegate = self
@@ -57,6 +52,7 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
     open func ynSearchTextfieldcancelButtonClicked() {
         self.ynSearchTextfieldView.ynSearchTextField.text = ""
         self.ynSearchTextfieldView.ynSearchTextField.endEditing(true)
+        self.ynSearchView.ynSearchMainView.redrawSearchHistoryButtons()
         
         UIView.animate(withDuration: 0.3, animations: {
             self.ynSearchView.ynSearchMainView.alpha = 1

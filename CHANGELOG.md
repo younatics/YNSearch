@@ -1,5 +1,8 @@
 # Updates
-## [v2.2.0](https://github.com/younatics/YNSearch/releases/tag/2.1.0)
+## [v2.2.1](https://github.com/younatics/YNSearch/releases/tag/2.2.1)
+* Minor method update
+
+## [v2.2.0](https://github.com/younatics/YNSearch/releases/tag/2.2.0)
 * More UI friendly
 
 ## [v2.1.0](https://github.com/younatics/YNSearch/releases/tag/2.1.0)
