@@ -15,6 +15,7 @@ See [CHANGELOG](https://github.com/younatics/YNSearch/blob/master/CHANGELOG.md) 
 
 ## Intoduction
 🔍 Awesome search view, written in Swift 3, appears search view like Pinterest Search view. You can fully customize this library. You can also use this library with Realm! See usage in below
+#### See [Highlighter](https://github.com/younatics/Highlighter) for highlight search result
 
 ![demo2](Images/Highlighter.gif)
 ![demo](Images/YNSearch.gif)
