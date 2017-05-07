@@ -165,6 +165,8 @@ See more usage in demo
 
 ## References
 #### Please tell me or make pull request if you use this library in your application :) 
+#### [Highlighter](https://github.com/younatics/Highlighter)
+#### [Objectification](https://github.com/younatics/Objectification)
 
 ## Author
 [younatics 🇰🇷](http://younatics.github.io)
