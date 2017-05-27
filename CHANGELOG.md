@@ -1,4 +1,7 @@
 # Updates
+## [v2.3.0](https://github.com/younatics/YNSearch/releases/tag/2.3.0)
+* Bug fixed
+
 ## [v2.2.1](https://github.com/younatics/YNSearch/releases/tag/2.2.1)
 * Minor method update
 
