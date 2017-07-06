@@ -33,6 +33,9 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
         self.ynSearchTextfieldView.ynSearchTextField.delegate = self
         self.ynSearchTextfieldView.ynSearchTextField.addTarget(self, action: #selector(ynSearchTextfieldTextChanged(_:)), for: .editingChanged)
         self.ynSearchTextfieldView.cancelButton.addTarget(self, action: #selector(ynSearchTextfieldcancelButtonClicked), for: .touchUpInside)
+        
+        self.ynSearchTextfieldView.ynSearchTextField.clearButtonMode = UITextFieldViewMode.whileEditing
+        
         self.view.addSubview(self.ynSearchTextfieldView)
         
         self.ynSearchView = YNSearchView(frame: CGRect(x: 0, y: 70, width: width, height: height-70))
@@ -62,7 +65,6 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
             self.ynSearchView.ynSearchMainView.isHidden = false
             self.ynSearchView.ynSearchListView.isHidden = true
             self.ynSearchTextfieldView.cancelButton.isHidden = true
-            
         }
     }
     open func ynSearchTextfieldTextChanged(_ textField: UITextField) {
