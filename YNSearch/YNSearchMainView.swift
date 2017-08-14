@@ -136,7 +136,7 @@ open class YNSearchMainView: UIView {
         guard let lastHistoryView = self.ynSearchHistoryViews.last else { return }
         
         self.clearHistoryButton = UIButton(frame: CGRect(x: margin, y: lastHistoryView.frame.origin.y + lastHistoryView.frame.height, width: width - (margin * 2), height: 40))
-        self.clearHistoryButton.setTitle("Clear serach history", for: .normal)
+        self.clearHistoryButton.setTitle("Clear search history", for: .normal)
         self.clearHistoryButton.titleLabel?.font = UIFont.systemFont(ofSize: 13)
         self.clearHistoryButton.setTitleColor(UIColor.darkGray, for: .normal)
         self.clearHistoryButton.setTitleColor(UIColor.lightGray, for: .highlighted)
