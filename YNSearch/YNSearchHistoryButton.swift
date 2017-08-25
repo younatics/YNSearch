@@ -34,7 +34,7 @@ open class YNSearchHistoryView: UIView {
         self.addSubview(closeButton)
         
         self.bottomLine = UIView(frame: CGRect(x: 0, y: self.frame.height-1, width: self.frame.width, height: 1))
-        self.bottomLine.backgroundColor = UIColor.init(colorLiteralRed: 242/255, green: 242/255, blue: 242/255, alpha: 1)
+        self.bottomLine.backgroundColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
         self.addSubview(bottomLine)
         
     }

@@ -52,7 +52,7 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
 
     
     // MARK: - YNSearchTextfield
-    open func ynSearchTextfieldcancelButtonClicked() {
+    @objc open func ynSearchTextfieldcancelButtonClicked() {
         self.ynSearchTextfieldView.ynSearchTextField.text = ""
         self.ynSearchTextfieldView.ynSearchTextField.endEditing(true)
         self.ynSearchView.ynSearchMainView.redrawSearchHistoryButtons()
@@ -67,7 +67,7 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
             self.ynSearchTextfieldView.cancelButton.isHidden = true
         }
     }
-    open func ynSearchTextfieldTextChanged(_ textField: UITextField) {
+    @objc open func ynSearchTextfieldTextChanged(_ textField: UITextField) {
         self.ynSearchView.ynSearchListView.ynSearchTextFieldText = textField.text
     }
     
