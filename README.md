@@ -168,7 +168,7 @@ See more usage in demo
 #### [MotionBook](https://github.com/younatics/MotionBook)
 
 ## Author
-[younatics 🇰🇷](http://younatics.github.io)
+[younatics 🇰🇷](https://twitter.com/younatics)
 
 ## License
 YNSearch is available under the MIT license. See the LICENSE file for more info.
