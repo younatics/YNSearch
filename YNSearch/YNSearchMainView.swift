@@ -133,7 +133,7 @@ open class YNSearchMainView: UIView {
             ynSearchHistoryButtons.append(view.ynSearchHistoryButton)
             self.addSubview(view)
         }
-        let lastHistoryView = self.ynSearchHistoryViews.last ?? searchHistoryLabelOriginY
+        let lastHistoryView = self.ynSearchHistoryViews.last ?? YNSearchHistoryView()
         
         self.clearHistoryButton = UIButton(frame: CGRect(x: margin, y: lastHistoryView.frame.origin.y + lastHistoryView.frame.height, width: width - (margin * 2), height: 40))
         self.clearHistoryButton.setTitle("Clear search history", for: .normal)
