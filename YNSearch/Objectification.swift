@@ -87,10 +87,10 @@ public class Objectification {
     
     private func convertOptional(string: String) -> String {
         if string.hasPrefix("Optional(") && string.hasSuffix(")") {
-            let nonOptionalString = string.substring(10..<string.characters.count-2)
+            let nonOptionalString = string.substring(10..<string.count-2)
             
             if nonOptionalString.isInt || nonOptionalString.isDouble || nonOptionalString.isFloat {
-                return string.substring(9..<string.characters.count-1)
+                return string.substring(9..<string.count-1)
             } else {
                 return nonOptionalString
             }
