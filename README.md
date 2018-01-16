@@ -6,7 +6,6 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/younatics/YNSearch/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/younatics/YNSearch.svg?branch=master)](https://travis-ci.org/younatics/YNSearch)
 [![Platform](https://img.shields.io/cocoapods/p/YNSearch.svg?style=flat)](http://cocoapods.org/pods/YNSearch)
-[![Swift 3.1](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Swift 4.0](https://img.shields.io/badge/Swift-4.0-blue.svg?style=flat)](https://developer.apple.com/swift/)
 
 ## Updates
@@ -35,10 +34,7 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'YNSearch'
 ```
-#### Swift 4
-```ruby
-pod 'YNSearch', :git => 'https://github.com/younatics/YNSearch.git', :branch => 'swift4'
-```
+
 ### Carthage
 ```
 github "younatics/YNSearch"
