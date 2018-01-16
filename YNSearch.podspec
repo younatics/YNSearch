@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YNSearch'
-  s.version          = '2.3.0'
-  s.summary          = 'Awesome fully customizable search view written in Swift 3'
+  s.version          = '2.3.1'
+  s.summary          = 'Awesome fully customizable search view written in Swift 4'
 
   s.description      = <<-DESC
                         Awesome search view, written in Swift 3, appears search view like Pinterset Search view. You can fully customizable this library
