@@ -29,7 +29,7 @@ open class YNSearchListView: UITableView, UITableViewDelegate, UITableViewDataSo
         }
     }
 
-    public override init(frame: CGRect, style: UITableViewStyle) {
+    public override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         self.initView()
     }

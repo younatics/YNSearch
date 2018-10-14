@@ -34,7 +34,7 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
         self.ynSearchTextfieldView.ynSearchTextField.addTarget(self, action: #selector(ynSearchTextfieldTextChanged(_:)), for: .editingChanged)
         self.ynSearchTextfieldView.cancelButton.addTarget(self, action: #selector(ynSearchTextfieldcancelButtonClicked), for: .touchUpInside)
         
-        self.ynSearchTextfieldView.ynSearchTextField.clearButtonMode = UITextFieldViewMode.whileEditing
+        self.ynSearchTextfieldView.ynSearchTextField.clearButtonMode = UITextField.ViewMode.whileEditing
         
         self.view.addSubview(self.ynSearchTextfieldView)
         
