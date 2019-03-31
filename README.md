@@ -6,13 +6,13 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/younatics/YNSearch/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/younatics/YNSearch.svg?branch=master)](https://travis-ci.org/younatics/YNSearch)
 [![Platform](https://img.shields.io/cocoapods/p/YNSearch.svg?style=flat)](http://cocoapods.org/pods/YNSearch)
-[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-blue.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-blue.svg?style=flat)](https://developer.apple.com/swift/)
 
 ## Updates
 See [CHANGELOG](https://github.com/younatics/YNSearch/blob/master/CHANGELOG.md) for details
 
 ## Intoduction
-🔍 Awesome search view, written in Swift 4.2, appears search view like Pinterest Search view. You can fully customize this library. You can also use this library with Realm! See usage in below
+🔍 Awesome search view, written in Swift 5.0, appears search view like Pinterest Search view. You can fully customize this library. You can also use this library with Realm! See usage in below
 #### See [Highlighter](https://github.com/younatics/Highlighter) for highlight search result
 
 ![demo2](Images/Highlighter.gif)
@@ -22,7 +22,7 @@ See [CHANGELOG](https://github.com/younatics/YNSearch/blob/master/CHANGELOG.md) 
 
 ## Requirements
 
-`YNSearch` is written in Swift 4.2. Compatible with iOS 8.0+
+`YNSearch` is written in Swift 5.0. Compatible with iOS 8.0+
 
 ## Installation
 
