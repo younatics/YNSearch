@@ -8,11 +8,11 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YNSearch'
-  s.version          = '2.3.2'
-  s.summary          = 'Awesome fully customizable search view written in Swift 4'
+  s.version          = '2.4.0'
+  s.summary          = 'Awesome fully customizable search view written in Swift 5.0'
 
   s.description      = <<-DESC
-                        Awesome search view, written in Swift 3, appears search view like Pinterset Search view. You can fully customizable this library
+                        Awesome search view, written in Swift 5.0, appears search view like Pinterset Search view. You can fully customizable this library
                         DESC
 
   s.homepage         = 'https://github.com/younatics/YNSearch'
@@ -25,8 +25,6 @@ Pod::Spec.new do |s|
   s.resources        = "YNSearch/*.xcassets"
 
   s.ios.deployment_target = '8.0'
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'Foundation'
   s.requires_arc = true
 end

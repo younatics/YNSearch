@@ -27,9 +27,20 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
     }
+    
+    override open func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        var safeAreaTopInset: CGFloat = 0
+        if #available(iOS 11, *) {
+            safeAreaTopInset = view.safeAreaInsets.top
+        }
+        self.ynSearchTextfieldView.frame = CGRect(x: 20, y: safeAreaTopInset + 20, width: width - 40, height: 50)
+        self.ynSearchView.frame = CGRect(x: 0, y: 70 + safeAreaTopInset, width: width, height: height - 70 - safeAreaTopInset)
+    }
 
     open func ynSearchinit() {
-        self.ynSearchTextfieldView = YNSearchTextFieldView(frame: CGRect(x: 20, y: 20, width: width-40, height: 50))
+        self.ynSearchTextfieldView = YNSearchTextFieldView(frame: CGRect(x: 20, y: 20, width: width - 40, height: 50))
         self.ynSearchTextfieldView.ynSearchTextField.delegate = self
         self.ynSearchTextfieldView.ynSearchTextField.addTarget(self, action: #selector(ynSearchTextfieldTextChanged(_:)), for: .editingChanged)
         self.ynSearchTextfieldView.cancelButton.addTarget(self, action: #selector(ynSearchTextfieldcancelButtonClicked), for: .touchUpInside)
@@ -38,7 +49,7 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
         
         self.view.addSubview(self.ynSearchTextfieldView)
         
-        self.ynSearchView = YNSearchView(frame: CGRect(x: 0, y: 70, width: width, height: height-70))
+        self.ynSearchView = YNSearchView(frame: CGRect(x: 0, y: 70, width: width, height: height - 70))
         self.view.addSubview(self.ynSearchView)
     }
     

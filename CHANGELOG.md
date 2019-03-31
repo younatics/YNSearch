@@ -1,4 +1,7 @@
 # Updates
+## [v2.4.0](https://github.com/younatics/YNSearch/releases/tag/2.3.0)
+Swift 5.0 support
+
 ## [v2.3.0](https://github.com/younatics/YNSearch/releases/tag/2.3.0)
 * Bug fixed
 
