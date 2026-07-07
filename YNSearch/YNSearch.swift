@@ -8,9 +8,10 @@
 
 import UIKit
 
+@MainActor
 open class YNSearch: NSObject {
     var pref: UserDefaults!
-    
+
     public static let shared: YNSearch = YNSearch()
 
     public override init() {

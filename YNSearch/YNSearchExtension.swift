@@ -10,6 +10,21 @@ import UIKit
 
 private let minimumHitArea = CGSize(width: 44, height: 44)
 
+private final class BundleToken {}
+
+extension Bundle {
+    /// The bundle that ships YNSearch's asset catalog, resolved for every
+    /// integration path: Swift Package Manager (`Bundle.module`), CocoaPods, and
+    /// a plain framework.
+    static var ynSearch: Bundle {
+        #if SWIFT_PACKAGE
+        return .module
+        #else
+        return Bundle(for: BundleToken.self)
+        #endif
+    }
+}
+
 extension UIButton {
     open override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         // if the button is hidden/disabled/transparent it can't be hit
@@ -29,9 +44,9 @@ extension UIButton {
 extension UIColor {
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int = UInt32()
-        Scanner(string: hex).scanHexInt32(&int)
-        let a, r, g, b: UInt32
+        var int = UInt64()
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
         switch hex.count {
         case 3: // RGB (12-bit)
             (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)

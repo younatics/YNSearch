@@ -28,7 +28,7 @@ open class YNSearchListViewCell: UITableViewCell {
     
     open func initView() {
         self.searchImageView = UIImageView(frame: CGRect(x: 15, y: (self.frame.height - 15)/2, width: 15, height: 15))
-        let search = UIImage(named: "search", in: Bundle(for: YNSearch.self), compatibleWith: nil)
+        let search = UIImage(named: "search", in: Bundle.ynSearch, compatibleWith: nil)
         self.searchImageView.image = search
         self.addSubview(searchImageView)
         

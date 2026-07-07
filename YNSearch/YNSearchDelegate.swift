@@ -8,8 +8,10 @@
 
 import UIKit
 
+@MainActor
 public protocol YNSearchDelegate: YNSearchMainViewDelegate, YNSearchListViewDelegate { }
 
+@MainActor
 public protocol YNSearchMainViewDelegate {
     func ynCategoryButtonClicked(text: String)
     
@@ -19,7 +21,8 @@ public protocol YNSearchMainViewDelegate {
 
 }
 
-public protocol YNSearchListViewDelegate {    
+@MainActor
+public protocol YNSearchListViewDelegate {
     func ynSearchListViewClicked(key: String)
     
     func ynSearchListViewClicked(object: Any)

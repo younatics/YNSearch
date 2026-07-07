@@ -115,6 +115,6 @@ private extension String {
     func substring(_ r: Range<Int>) -> String {
         let fromIndex = self.index(self.startIndex, offsetBy: r.lowerBound)
         let toIndex = self.index(self.startIndex, offsetBy: r.upperBound)
-        return self.substring(with: Range<String.Index>(uncheckedBounds: (lower: fromIndex, upper: toIndex)))
+        return String(self[fromIndex..<toIndex])
     }
 }

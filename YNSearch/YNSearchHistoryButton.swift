@@ -28,7 +28,7 @@ open class YNSearchHistoryView: UIView {
         self.addSubview(ynSearchHistoryButton)
         
         self.closeButton = UIButton(frame: CGRect(x: self.frame.width - 15, y: (self.frame.height - 15)/2, width: 15, height: 15))
-        let close = UIImage(named: "close", in: Bundle(for: YNSearch.self), compatibleWith: nil)
+        let close = UIImage(named: "close", in: Bundle.ynSearch, compatibleWith: nil)
 
         self.closeButton.setImage(close, for: .normal)
         self.addSubview(closeButton)
@@ -66,7 +66,7 @@ open class YNSearchHistoryButton: UIButton {
     
     open func initView() {
         let searchHistoryImageview = UIImageView(frame: CGRect(x: 0, y: (self.frame.height - 15)/2, width: 15, height: 15))
-        let search_history = UIImage(named: "search_history", in: Bundle(for: YNSearch.self), compatibleWith: nil)
+        let search_history = UIImage(named: "search_history", in: Bundle.ynSearch, compatibleWith: nil)
         searchHistoryImageview.image = search_history
         self.addSubview(searchHistoryImageview)
         
