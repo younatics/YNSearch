@@ -1,5 +1,12 @@
 # Updates
-## [v2.4.0](https://github.com/younatics/YNSearch/releases/tag/2.3.0)
+## [v3.0.0](https://github.com/younatics/YNSearch/releases/tag/3.0.0)
+* Add a working Swift Package Manager library product with bundled resources and a test target
+* Update to Swift 6 and raise the minimum deployment target to iOS 13.0
+* Mark the public delegate protocols and `YNSearch` singleton as main-actor isolated
+* Replace deprecated Swift APIs and use `@main` in the demo app
+* Update the CocoaPods specification to version 3.0.0
+
+## [v2.4.0](https://github.com/younatics/YNSearch/releases/tag/2.4.0)
 Swift 5.0 support
 
 ## [v2.3.0](https://github.com/younatics/YNSearch/releases/tag/2.3.0)

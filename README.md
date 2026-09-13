@@ -1,12 +1,10 @@
 # YNSearch + Realm Support
 
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-[![Version](https://img.shields.io/cocoapods/v/YNSearch.svg?style=flat)](http://cocoapods.org/pods/YNSearch)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-brightgreen.svg?style=flat)](https://www.swift.org/package-manager/)
+[![CocoaPods](https://img.shields.io/cocoapods/v/YNSearch.svg?style=flat)](https://cocoapods.org/pods/YNSearch)
+[![Platform](https://img.shields.io/badge/platform-iOS-13%2B-lightgrey.svg?style=flat)](https://developer.apple.com/ios/)
+[![Swift 6.0](https://img.shields.io/badge/Swift-6.0-blue.svg?style=flat)](https://www.swift.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/younatics/YNSearch/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/younatics/YNSearch.svg?branch=master)](https://travis-ci.org/younatics/YNSearch)
-[![Platform](https://img.shields.io/cocoapods/p/YNSearch.svg?style=flat)](http://cocoapods.org/pods/YNSearch)
-[![Swift 6.0](https://img.shields.io/badge/Swift-6.0-blue.svg?style=flat)](https://developer.apple.com/swift/)
 
 ## Updates
 See [CHANGELOG](https://github.com/younatics/YNSearch/blob/master/CHANGELOG.md) for details
@@ -22,7 +20,7 @@ See [CHANGELOG](https://github.com/younatics/YNSearch/blob/master/CHANGELOG.md) 
 
 ## Requirements
 
-`YNSearch` is written in Swift 6. Compatible with iOS 13.0+. Supports Swift Package Manager, CocoaPods, and Carthage.
+`YNSearch` uses Swift 6.0 and requires iOS 13.0 or later. `Package.swift` uses Swift tools 6.0, and both Swift Package Manager and CocoaPods declare iOS 13.0 as the minimum deployment target.
 
 ## Installation
 
@@ -42,18 +40,13 @@ dependencies: [
 ]
 ```
 
-### Cocoapods
+### CocoaPods
 
 YNSearch is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'YNSearch'
-```
-
-### Carthage
-```
-github "younatics/YNSearch"
+pod 'YNSearch', '~> 3.0'
 ```
 
 ## Simple Usage
@@ -61,45 +54,48 @@ Set categories (required) and search histories (optional)
 ```swift
 import YNSearch
 
-let demoDatabase = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert", "UIView", "UITextfield", "UITableView", "Swift", "iOS", "Android"]
+let demoCategories = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert", "UIView", "UITextfield", "UITableView", "Swift", "iOS", "Android"]
+let demoSearchHistories = ["Menu", "Animation", "Transition", "TableView"]
 
-ynSearch.setCategories(value: demoDatabase)
-ynSearch.setSearchHistories(value: demoDatabase)
+let ynSearch = YNSearch()
+ynSearch.setCategories(value: demoCategories)
+ynSearch.setSearchHistories(value: demoSearchHistories)
 
-self.ynSearchinit()
+ynSearchinit()
 ```
 
 Set database (required) and key (required). key will be displayed in `YNSearchListView` You can set your database `[Any]` if you want to customize. 
 ```swift
-let database1 = YNDropDownMenu(key: "YNDropDownMenu")
-let database2 = YNSearchData(key: "YNSearchData")
+let database1 = YNSearchModel(key: "YNDropDownMenu")
+let database2 = YNSearchModel(key: "YNSearchData")
 let demoDatabase = [database1, database2]
         
-self.initData(database: demoDatabase)
+initData(database: demoDatabase)
 ```
 
 Set `YNSearchListView` Delegate
 ```Swift
 func ynSearchListView(_ ynSearchListView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.ynSearchView.ynSearchListView.dequeueReusableCell(withIdentifier: YNSearchListViewCell.ID) as! YNSearchListViewCell
-        if let ynmodel = self.ynSearchView.ynSearchListView.searchResultDatabase[indexPath.row] as? YNSearchModel {
-            cell.searchLabel.text = ynmodel.key
-        }
-        
-        return cell
+    let cell = ynSearchListView.dequeueReusableCell(withIdentifier: YNSearchListViewCell.ID) as! YNSearchListViewCell
+    if let model = self.ynSearchView.ynSearchListView.searchResultDatabase[indexPath.row] as? YNSearchModel {
+        cell.searchLabel.text = model.key
+    }
+
+    return cell
 }
-    
+
 func ynSearchListView(_ ynSearchListView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let ynmodel = self.ynSearchView.ynSearchListView.searchResultDatabase[indexPath.row] as? YNSearchModel, let key = ynmodel.key {
+    let listView = self.ynSearchView.ynSearchListView
+    if let model = listView.searchResultDatabase[indexPath.row] as? YNSearchModel, let key = model.key {
         // Call listview clicked based on key
-        self.ynSearchView.ynSearchListView.ynSearchListViewDelegate?.ynSearchListViewClicked(key: key)
-        
+        listView.ynSearchListViewDelegate?.ynSearchListViewClicked(key: key)
+
         // return object you set in database
-        self.ynSearchView.ynSearchListView.ynSearchListViewDelegate?.ynSearchListViewClicked(object: self.ynSearchView.ynSearchListView.database[indexPath.row])
-        
+        listView.ynSearchListViewDelegate?.ynSearchListViewClicked(object: model)
+
         // Append Search history
-        self.ynSearchView.ynSearchListView.ynSearch.appendSearchHistories(value: key)
-        }
+        listView.ynSearch.appendSearchHistories(value: key)
+    }
 }
 ```
 
@@ -121,7 +117,7 @@ for data in datas {
             dataArray.append(searchModel)
         }
         
-self.initData(database: dataArray)
+initData(database: dataArray)
 ```
 
 
@@ -150,7 +146,7 @@ YNSearchViewController: Inherit this viewcontroller
 ## Custom Usage
 set `YNSearchDelegate` if you want callback
 ```Swift 
-self.delegate = self
+delegate = self
 
 func ynSearchHistoryButtonClicked(text: String) {
   print(text)
@@ -160,18 +156,18 @@ func ynCategoryButtonClicked(text: String) {
   print(text)
 }
     
-func ynSearchListViewClicked(text: String) {
-  print(text)
+func ynSearchListViewClicked(key: String) {
+  print(key)
 }
 
-func ynSearchListViewClicked(object: YNSearchModel) {
+func ynSearchListViewClicked(object: Any) {
   print(object)
 }
 ```
 
 Set `YNCategoryButton` type.
 ```Swift
-self.ynSearchView.ynSearchMainView.setYNCategoryButtonType(type: .colorful)
+setYNCategoryButtonType(type: .colorful)
 ```
 
 See more usage in demo
