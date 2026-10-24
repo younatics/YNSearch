@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YNSearch'
-  s.version          = '3.0.0'
+  s.version          = '3.1.0'
   s.summary          = 'Awesome fully customizable search view written in Swift 6'
 
   s.description      = <<-DESC
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.resources        = "YNSearch/*.xcassets"
 
   s.swift_version = '6.0'
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '15.0'
   s.frameworks = 'UIKit', 'Foundation'
   s.requires_arc = true
 end

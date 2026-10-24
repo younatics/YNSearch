@@ -1,4 +1,7 @@
 # Updates
+## [v3.1.0](https://github.com/younatics/YNSearch/releases/tag/3.1.0)
+* Raise the minimum deployment target to iOS 15.0 (Xcode 26/27 no longer build for iOS 13/14)
+
 ## [v3.0.0](https://github.com/younatics/YNSearch/releases/tag/3.0.0)
 * Add a working Swift Package Manager library product with bundled resources and a test target
 * Update to Swift 6 and raise the minimum deployment target to iOS 13.0

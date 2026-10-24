@@ -20,7 +20,7 @@ See [CHANGELOG](https://github.com/younatics/YNSearch/blob/master/CHANGELOG.md) 
 
 ## Requirements
 
-`YNSearch` uses Swift 6.0 and requires iOS 13.0 or later. `Package.swift` uses Swift tools 6.0, and both Swift Package Manager and CocoaPods declare iOS 13.0 as the minimum deployment target.
+`YNSearch` uses Swift 6.0 and requires iOS 15.0 or later. `Package.swift` uses Swift tools 6.0, and both Swift Package Manager and CocoaPods declare iOS 15.0 as the minimum deployment target.
 
 ## Installation
 
